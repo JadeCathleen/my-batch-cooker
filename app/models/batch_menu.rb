@@ -1,3 +1,3 @@
 class BatchMenu < ApplicationRecord
-  belongs_to :user
+  has_many :recipes, through: :recipes_lists
 end
