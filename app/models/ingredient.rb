@@ -11,7 +11,7 @@ class Ingredient < ApplicationRecord
     liquid: 7
   }
 
-  enum category: {
+  enum unit_category: {
     g: 0,
     cl: 1,
     teaspoon: 2,
