@@ -1,0 +1,29 @@
+.items {
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+  margin: 0 50px;
+
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 30%;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.item-img > img {
+  height: 150px;
+}
+
+
+.middle-front h2 {
+  font-size: 40px;
+  font-family: "Galano Grotesque Bold",sans-serif;
+  text-align: center;
+}
