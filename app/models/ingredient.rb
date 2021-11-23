@@ -1,20 +1,22 @@
 class Ingredient < ApplicationRecord
   has_many :ingredient_qtys
     enum category: {
-    meat: 0,
-    poultry: 1,
-    fish: 2,
-    cheese: 3,
+    boucherie: 0,
+    volaille: 1,
+    poissonnerie: 2,
+    cremerie: 3,
     fruit: 4,
-    condiment: 5,
-    vegetable: 6,
-    liquid: 7
+    epicerie: 5,
+    legumes: 6,
+    liquides: 7,
+    rayon_frais: 8
   }
 
   enum unit_category: {
     g: 0,
     cl: 1,
-    teaspoon: 2,
-    tablespoon: 3
+    c_a_cafe: 2,
+    c_a_soupe: 3,
+    piece: 4
   }
 end
