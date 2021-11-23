@@ -18,6 +18,7 @@ class Ingredient < ApplicationRecord
     "cl" => 3,
     "c.à café" => 4,
     "c. à soupe" => 5,
-    "pincée" => 6
+    "pincée" => 6,
+    "tranche" => 7
   }
 end
