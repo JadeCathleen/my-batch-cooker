@@ -1,0 +1,7 @@
+  <% if @recipe.photo.attached? %>
+    <%= cl_image_tag @recipe.photo.key %>
+  <% end %>
+  <%= @recipe.name %>
+  <%= @recipe.description %>
+  <p>Temps de préparation : <%= @recipe.prep_time.strftime('%M min') %></p>
+  <p>Temps de cuisson : <%= @recipe.cook_time.strftime('%M min') %></p>

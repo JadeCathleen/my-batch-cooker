@@ -1,0 +1,9 @@
+<% @recipes.each do |recipe| %>
+  <%= link_to recipe_path(recipe), class: 'card' do %>
+    <% if recipe.photo.attached? %>
+      <%= cl_image_tag recipe.photo.key, width: 200 %>
+    <% end %>
+    <%= recipe.name %>
+    <%= recipe.description %>
+  <% end %>
+<% end %>
