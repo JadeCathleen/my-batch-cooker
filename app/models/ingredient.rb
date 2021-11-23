@@ -5,11 +5,12 @@ class Ingredient < ApplicationRecord
     "volaille" => 2,
     "poissonnerie" => 3,
     "crèmerie" => 4,
-    "fruit" => 5,
+    "fruits" => 5,
     "épicerie" => 6,
     "légumes" => 7,
     "liquides" => 8,
-    "rayon frais" => 9
+    "rayon frais" => 9,
+    "boulangerie" => 10
   }
 
   enum unit_category: {
