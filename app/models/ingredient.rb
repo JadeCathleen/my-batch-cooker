@@ -18,7 +18,7 @@ class Ingredient < ApplicationRecord
     "pièce" => 1,
     'g' => 2,
     "cl" => 3,
-    "c.à café" => 4,
+    "c. à café" => 4,
     "c. à soupe" => 5,
     "pincée" => 6,
     "tranche" => 7
