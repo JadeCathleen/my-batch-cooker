@@ -1,3 +1,3 @@
 class Ingredient < ApplicationRecord
-  has_many :ingredient_quanitys
+  has_many :ingredient_quantities
 end
