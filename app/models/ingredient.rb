@@ -10,7 +10,8 @@ class Ingredient < ApplicationRecord
     "légumes" => 7,
     "liquides" => 8,
     "rayon frais" => 9,
-    "boulangerie" => 10
+    "boulangerie" => 10,
+    "herbes" => 11
   }
 
   enum unit_category: {
