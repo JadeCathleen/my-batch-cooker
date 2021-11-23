@@ -1,0 +1,51 @@
+name,category,unit_category,ingredient_code
+filet de sole,poissonnerie,pièce,1
+oeuf,crèmerie,pièce,2
+chapelure,épicerie,g,3
+farine,épicerie,g,4
+sucre,épicerie,g,5
+sel,épicerie,pincée,6
+poivre,épicerie,pincée,7
+huile,épicerie,c. à soupe,8
+citron,fruits,pièce,9
+filet de daurade,poissonnerie,pièce,10
+cube de légumes,épicerie,pièce,11
+ail semoule,épicerie,c. à café,12
+huile d'olive,épicerie,c. à soupe,13
+basilic,herbes,pincée,14
+aubergine,légumes,pièce,15
+tomate,légumes,pièce,16
+gousse d'ail,légumes,pièce,17
+boeuf hâché,boucherie,g,18
+oignon,légumes,pièce,19
+fromage râpé,crèmerie,g,20
+blanc de poulet,boucherie,pièce,21
+citron vert,fruits,pièce,22
+yaourt nature,crèmerie,pièce,23
+steak haché,boucherie,pièce,24
+cheddar,crèmerie,tranche,25
+ketchup,épicerie,c. à soupe,26
+mayonnaise,épicerie,c. à soupe,27
+salade verte,légumes,pièce,28
+buns,boulangerie,pièce,29
+carotte,légumes,pièce,30
+miel,épicerie,c. à soupe,31
+persil,herbes,pincée,32
+vinaigre de cidre,épicerie,c. à soupe,33
+thym,herbes,pincée,34
+saumon,poissonnerie,g,35
+pâte feulletée,rayon frais,pièce,36
+chèvre,crèmerie,g,37
+crème fraîche,crèmerie,cl,38
+aneth,herbes,pincée,39
+pâtes,épicerie,g,40
+lardons,boucherie,g,41
+champignons,légumes,g,42
+reblochon,crèmerie,pièce,43
+pommes de terre,légumes,g,44
+fromage frais allégé,crèmerie,g,45
+lait écrémé,rayon frais,cl,46
+parmesan râpé,crèmerie,g,47
+beurre,rayon frais,g,48
+curry,herbes,c. à café,49
+noix de muscade,épicerie,pincée,50
