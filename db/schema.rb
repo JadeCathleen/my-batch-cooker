@@ -10,7 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_23_125949) do
+
+ActiveRecord::Schema.define(version: 2021_11_23_143954) do
+
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -41,7 +43,6 @@ ActiveRecord::Schema.define(version: 2021_11_23_125949) do
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "nb_of_meals"
     t.boolean "monday_lunch"
     t.boolean "monday_dinner"
     t.boolean "tuesday_lunch"
@@ -65,6 +66,8 @@ ActiveRecord::Schema.define(version: 2021_11_23_125949) do
     t.bigint "preparation_step_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "prep_code"
+    t.integer "ingredient_code"
     t.index ["ingredient_id"], name: "index_ingredient_quantities_on_ingredient_id"
     t.index ["preparation_step_id"], name: "index_ingredient_quantities_on_preparation_step_id"
   end
@@ -75,6 +78,7 @@ ActiveRecord::Schema.define(version: 2021_11_23_125949) do
     t.integer "unit_category"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "ingredient_code"
   end
 
   create_table "preparation_steps", force: :cascade do |t|
@@ -84,6 +88,8 @@ ActiveRecord::Schema.define(version: 2021_11_23_125949) do
     t.bigint "recipe_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "recipe_code"
+    t.integer "prep_code"
     t.index ["action_verb"], name: "index_preparation_steps_on_action_verb"
     t.index ["recipe_id"], name: "index_preparation_steps_on_recipe_id"
   end
@@ -93,6 +99,7 @@ ActiveRecord::Schema.define(version: 2021_11_23_125949) do
     t.text "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "recipe_code"
   end
 
   create_table "recipes_lists", force: :cascade do |t|
@@ -100,6 +107,7 @@ ActiveRecord::Schema.define(version: 2021_11_23_125949) do
     t.bigint "recipe_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "meal_time"
     t.index ["batch_menu_id"], name: "index_recipes_lists_on_batch_menu_id"
     t.index ["recipe_id"], name: "index_recipes_lists_on_recipe_id"
   end
