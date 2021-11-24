@@ -10,10 +10,10 @@ require 'open-uri'
 
 puts "Cleaning database..."
 
+IngredientQuantity.destroy_all
+PreparationStep.destroy_all
 Recipe.destroy_all
 Ingredient.destroy_all
-PreparationStep.destroy_all
-IngredientQuantity.destroy_all
 
 
 
