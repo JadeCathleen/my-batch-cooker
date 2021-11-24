@@ -1,9 +1,27 @@
-<% @recipes.each do |recipe| %>
-  <%= link_to recipe_path(recipe), class: 'card' do %>
-    <% if recipe.photo.attached? %>
-      <%= cl_image_tag recipe.photo.key, width: 200 %>
+  <div class="cards">
+    <% @recipes.each do |recipe| %>
+      <%= link_to recipe_path(recipe), class: 'card-link' do %>
+        <div class='card-link-infos'>
+          <div class="artist+name">
+          <p><%= recipe.name %></p>
+          <p><em><%= recipe.description %></em></p>
+          </div>
+        </div>
+        <% if recipe.photo.attached? %>
+          <%= cl_image_tag recipe.photo.key %>
+        <% else %>
+          <%# Une image de base %>
+        <% end %>
+        <div class='show-edit-recipe position-absolute top-0 end-0'>
+          </div>
+      <% end %>
+
+        <% if false %>
+          <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_tag recipe.photo.key %>)">
+            <div class="oeuvres-infos">
+              <p>Name: <%= recipe.name %>, Description: <%=  recipe.description %></p>
+            </div>
+          </div>
+        <% end %>
     <% end %>
-    <%= recipe.name %>
-    <%= recipe.description %>
-  <% end %>
-<% end %>
+  </div>
