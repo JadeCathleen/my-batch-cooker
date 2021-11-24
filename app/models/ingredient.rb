@@ -2,16 +2,15 @@ class Ingredient < ApplicationRecord
   has_many :ingredient_quantities
   enum category: {
     "boucherie" => 1,
-    "volaille" => 2,
-    "poissonnerie" => 3,
-    "crèmerie" => 4,
-    "fruits" => 5,
-    "épicerie" => 6,
-    "légumes" => 7,
-    "liquides" => 8,
-    "rayon frais" => 9,
-    "boulangerie" => 10,
-    "herbes" => 11
+    "poissonnerie" => 2,
+    "crèmerie" => 3,
+    "fruits" => 4,
+    "épicerie" => 5,
+    "légumes" => 6,
+    "liquides" => 7,
+    "rayon frais" => 8,
+    "boulangerie" => 9,
+    "herbes" => 10
   }
 
   enum unit_category: {
