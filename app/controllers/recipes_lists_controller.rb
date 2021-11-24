@@ -17,7 +17,7 @@ class RecipesListsController < ApplicationController
         @meals_list.reject! { |meal_list| meals_time.include?(meal_list) }
         @recipes_list.meal_time = @meals_list.first
         if @recipes_list.save
-          format.json { render json: { recipe_name: @recipe.name } }
+          format.json { render json: { recipe_name: @recipe.name, recipes_list_id: @recipes_list.id } }
         end
       end
     end

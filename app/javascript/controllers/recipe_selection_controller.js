@@ -16,7 +16,7 @@ export default class extends Controller {
     const recipeId = e.currentTarget.dataset.id
     const batchId = e.currentTarget.dataset.batchId
     const url = `/batch_menus/${batchId}/recipes_lists`
-    const card = e.currentTarget.closest('.card')
+    const card = e.currentTarget.closest('.card-link')
     let formData = new FormData()
     formData.append("recipes_list[recipe_id]", recipeId)
     fetch(url, {
@@ -24,9 +24,8 @@ export default class extends Controller {
       body: formData
     }).then(response => response.json())
     .then((data) => {
-      this.contentTarget.insertAdjacentHTML('beforeend', `<p>${data.recipe_name}</p>`)
+      this.contentTarget.insertAdjacentHTML('beforeend', `<p>${data.recipe_name}</p><a rel="nofollow" data-method="delete" href="/recipes_lists/${data.recipes_list_id}">Supprimer</a>`)
       card.classList.add('d-none')
-
     })
   }
 }

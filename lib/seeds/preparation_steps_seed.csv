@@ -1,45 +1,118 @@
 action_verb,content,time,recipe_code,prep_code
-prepare,"Préparer 3 assiettes : la première remplie de la farine, la 2ème des oeufs battus et la 3ème de la chapelure.",2,1,1
-mix,"Saler et poivrer les filets de poissons et trempez-les dans chacune des assiettes, en commençant par la farine, puis les oeufs et la chapelure.",2,1,2
+prepare,"Préparer 3 assiettes : la première remplie de la farine, la 2ème des oeufs battus et la 3ème de la chapelure.",5,1,1
+mix,"Saler et poivrer les filets de poissons et trempez-les dans chacune des assiettes, en commençant par la farine, puis les oeufs et la chapelure.",5,1,2
 cook,Faites revenir les filets de chaque coté pendant 5 à 8minutes dans une poêle huilée.,5,1,3
-serve,Servez en arrosant d'un filet de citron.,1,1,4
-pre_heat,Préchauffez le four à 180°C.,1,3,5
-mix,"Dans un saladier, travaillez à la main les filets de poisson en faisant pénétrer dans la chair le cube de bouillon de légumes émietté, puis l’ail semoule.",2,3,6
-pre_cook,Disposez les filets sur le papier de cuisson préalablement posé sur une plaque allant au four. Versez sur chaque morceau de poisson un filet d’huile d’olive.,1,3,7
+serve,Servez en arrosant d'un filet de citron.,0,1,4
+pre_heat,Préchauffez le four à 180°C.,0,3,5
+mix,"Dans un saladier, travaillez à la main les filets de poisson en faisant pénétrer dans la chair le cube de bouillon de légumes émietté, puis l’ail semoule.",5,3,6
+pre_cook,Disposez les filets sur le papier de cuisson préalablement posé sur une plaque allant au four. Versez sur chaque morceau de poisson un filet d’huile d’olive.,0,3,7
 cook,Enfournez et laissez cuire pendant 9 minutes à chaleur tournante et 1 minute au grill.,10,3,8
-serve,"Dressez, parsemez de feuilles de basilic.",1,3,9
-pre_heat,Préchauffer votre four à 150°C.,1,4,10
-cut,Coupez les blancs de poulet en dés d’environ 3 cm de côté.,2,4,11
-mix,"Mettez les blancs de poulet dans un saladier. Ajoutez les 2 yaourts, le zeste du citron vert, salez et poivrez. Mélangez.",2,4,12
-pre_cook,Étalez les dés de poulet sur une plaque de cuisson anti adhésive ou dans un plat mais il ne faut pas que le poulet soit sur plusieurs épaisseurs.,1,4,13
+serve,"Dressez, parsemez de feuilles de basilic.",0,3,9
+pre_heat,Préchauffer votre four à 150°C.,0,4,10
+cut,Coupez les blancs de poulet en dés d’environ 3 cm de côté.,5,4,11
+mix,"Mettez les blancs de poulet dans un saladier. Ajoutez les 2 yaourts, le zeste du citron vert, salez et poivrez. Mélangez.",5,4,12
+pre_cook,Étalez les dés de poulet sur une plaque de cuisson anti adhésive ou dans un plat mais il ne faut pas que le poulet soit sur plusieurs épaisseurs.,0,4,13
 cook,Enfournez pour 15 minutes. Vérifiez la cuisson du poulet en coupant un dé en deux.,15,4,14
-serve,"A la sortie du four, pressez le jus du citron vert sur le poulet, salez et poivrez à nouveau.",1,4,15
-pre_heat,Préchauffez votre four à 200°C.,1,5,16
-cut,Pelez les carottes et coupez-les en bâtonnets. Hâcher le persil.,3,5,17
-mix,"Mélangez dans un bol l'huile d'olive, le miel et le vinaigre de cidre.",2,5,18
-pre_cook,"Placez les carottes sur une plaque allant au four. Arrosez-les du mélange, salez et poivrez. Puis mélangez les carottes pour bien les enrober et étalez-les sur une couche uniforme.",3,5,19
+serve,"A la sortie du four, pressez le jus du citron vert sur le poulet, salez et poivrez à nouveau.",0,4,15
+pre_heat,Préchauffez votre four à 200°C.,0,5,16
+cut,Pelez les carottes et coupez-les en bâtonnets. Hâcher le persil.,5,5,17
+mix,"Mélangez dans un bol l'huile d'olive, le miel et le vinaigre de cidre.",5,5,18
+pre_cook,"Placez les carottes sur une plaque allant au four. Arrosez-les du mélange, salez et poivrez. Puis mélangez les carottes pour bien les enrober et étalez-les sur une couche uniforme.",5,5,19
 cook,Enfournez 35 minutes.,35,5,20
-serve,"Sortez les carottes du four, mélangez-les et parsemez-les de persil et de thym.",1,5,21
-pre_heat,Préchauffez le four à 180°C.,1,6,22
-prepare,Etalez la pâte feuilletée dans un moule à tarte.,1,6,23
-cut,Découpez le saumon en dés. Ciselez l'aneth.,3,6,24
-mix,"Dans un grand récipient, écrasez le chèvre à l'aide d'une fourchette. Incorporez progressivement les oeufs. Ajoutez la crème, les dés de saumon, l'aneth, le sel et le poivre. Mélangez le tout.",4,6,25
-pre_cook,Versez la préparation sur la pâte feuilletée.,1,6,26
+serve,"Sortez les carottes du four, mélangez-les et parsemez-les de persil et de thym.",0,5,21
+pre_heat,Préchauffez le four à 180°C.,0,6,22
+prepare,Etalez la pâte feuilletée dans un moule à tarte.,0,6,23
+cut,Découpez le saumon en dés. Ciselez l'aneth.,5,6,24
+mix,"Dans un grand récipient, écrasez le chèvre à l'aide d'une fourchette. Incorporez progressivement les oeufs. Ajoutez la crème, les dés de saumon, l'aneth, le sel et le poivre. Mélangez le tout.",5,6,25
+pre_cook,Versez la préparation sur la pâte feuilletée.,0,6,26
 cook,Enfournez durant 40 minutes.,40,6,27
-serve,Servez chaud ou tiède.,1,6,28
-pre_heat,Préchauffez votre four à 180°C.,1,2,29
-cut,"Épluchez et coupez l’oignon en fines rondelles, coupez la base de la salade et découpez-la en feuilles. Coupez vos pains à hamburger en 2 et coupez la tomate en rondelles.",1,2,30
+serve,Servez chaud ou tiède.,0,6,28
+pre_heat,Préchauffez votre four à 180°C.,0,2,29
+cut,"Épluchez et coupez l’oignon en fines rondelles, coupez la base de la salade et découpez-la en feuilles. Coupez vos pains à hamburger en 2 et coupez la tomate en rondelles.",0,2,30
 pre_cook,"Dans une pôele, faites chauffer un filet d’huile d’olive, faites légèrement dorer les rondelles d’oignon dans la poêle chaude puis débarrassez-les. Dès que votre four est chaud, laissez dorer les buns pendant 10 minutes.",10,2,31
-cook,"Dans la poêle ayant servi à dorer les rondelles d’oignon, faites cuire les steaks selon vos goûts (saignant, à point ou bien cuit). En fin de cuisson, déposez une tranche de cheddar sur chacun des steaks et poursuivez la cuisson 2 minutes pour que le cheddar commence légèrement à fondre.",4,2,32
-serve,"Mettez une c. à café de mayonnaise et/ou de ketchup sur les buns. Déposez ensuite une feuille de salade verte, une rondelle de tomate puis quelques rondelles d’oignon. Ajoutez les steaks hachés au fromage puis refermez.",1,2,33
-pre_heat,Préchauffez le four à 200°C.,1,7,34
+cook,"Dans la poêle ayant servi à dorer les rondelles d’oignon, faites cuire les steaks selon vos goûts (saignant, à point ou bien cuit). En fin de cuisson, déposez une tranche de cheddar sur chacun des steaks et poursuivez la cuisson 2 minutes pour que le cheddar commence légèrement à fondre.",5,2,32
+serve,"Mettez une c. à café de mayonnaise et/ou de ketchup sur les buns. Déposez ensuite une feuille de salade verte, une rondelle de tomate puis quelques rondelles d’oignon. Ajoutez les steaks hachés au fromage puis refermez.",0,2,33
+pre_heat,Préchauffez le four à 200°C.,0,7,34
 prepare,Faites cuire les pâtes en suivant les indications sur le paquet.,10,7,35
-cut,Nettoyez et coupez les champignons en lamelles.,1,7,36
-mix,"Faites revenir les champignons à la poêle avec un peu de beurre pendant quelques minutes. Réservez. Beurrez un moule à gratin. Déposez-y les pâtes égouttées, les champignons et les lardons. Recouvrez le tout avec la crème. Mélangez doucement à l'aide d'une spatule pour bien répartir la crème.",6,7,37
-pre_cook,Coupez le reblochon en tranches et disposez-les sur la préparation.,1,7,38
+cut,Nettoyez et coupez les champignons en lamelles.,0,7,36
+mix,"Faites revenir les champignons à la poêle avec un peu de beurre pendant quelques minutes. Réservez. Beurrez un moule à gratin. Déposez-y les pâtes égouttées, les champignons et les lardons. Recouvrez le tout avec la crème. Mélangez doucement à l'aide d'une spatule pour bien répartir la crème.",5,7,37
+pre_cook,Coupez le reblochon en tranches et disposez-les sur la préparation.,0,7,38
 cook,Enfournez le gratin de pâtes pendant 20 minutes,20,7,39
-pre_heat,Préchauffez le four à 170°C.,1,8,40
+pre_heat,Préchauffez le four à 170°C.,0,8,40
 prepare,Lavez les pommes de terres puis épluchez-les et coupez-les en rondelles.,15,8,41
-mix,"Mettez le fromage frais dans un petit saladier, ajoutez le lait et mélangez. Ajoutez le curry, la muscade, du sel et du poivre puis mélangez.",2,8,42
-pre_cook,Beurrez le plat à gratin et disposez les rondelles de pommes de terre. Versez la préparation au fromage frais par dessus.,2,8,43
+mix,"Mettez le fromage frais dans un petit saladier, ajoutez le lait et mélangez. Ajoutez le curry, la muscade, du sel et du poivre puis mélangez.",5,8,42
+pre_cook,Beurrez le plat à gratin et disposez les rondelles de pommes de terre. Versez la préparation au fromage frais par dessus.,5,8,43
 cook,Faites cuire au four 25 minutes. Saupoudrez de parmesan et prolongez la cuisson 30 minutes. Dégustez le gratin dauphinois allégé bien chaud.,55,8,44
+pre_heat,Préchauffez le four à 220°C.,0,9,45
+cut,Coupez l'avocat en deux et retirez le noyau. Pelez et hachez l'ail puis frottez la chair sur l'avocat.,5,9,46
+mix,Cassez un oeuf dans le creux de chaque moitié d'avocat. Salez et poivrez.,5,9,47
+cook,Enfournez pendant 15 minutes puis dégustez aussitôt les oeufs en cocotte d'avocat.,15,9,48
+pre_heat,Préchauffez le four à 200°C.,0,10,49
+prepare,"A l'aide de ciseaux, retirez la nervure centrale des feuilles du chou kale et coupez-les en fines lanières dans un saladier. Pressez le citron, versez le jus sur le chou et ajoutez 3 cuillères à soupe d'huile d'olive. Avec vos mains, malaxez les feuilles et laissez macérer 15 minutes pour attendrir les fibres.",20,10,50
+cut,"Récupérez les grains de la grenade, coupez l'avocat en cubes et mettez-les avec le chou kale dans le saladier.",5,10,51
+mix,"Egouttez les pois chiches et placez-les sur une plaque de four sur laquelle vous aurez placé du papier sulfurisé. Ajoutez 2 cuillères à soupe d'huile d'olive, le paprika, le cumin, salez et poivrez, puis mélangez le tout avec vos mains.",5,10,52
+cook,Enfournez en passant au mode grill pendant 5 minutes.,5,10,53
+serve,"Ajoutez les pois chiches grillés et le sésame au mélange . Salez, poivrez et mélangez à nouveau. Servez aussitôt.",0,10,54
+cut,"Coupez les avocats en deux et retirez les noyaux. A l'aide d'une grosse cuillère, retirez la chair des avocats et coupez-la en dés. Pelez les oignons et le céleri. Coupez-les en dés ainsi que les tomates.",5,11,55
+mix,"Versez dans un saladier le jus de citron, le yaourt, la moutarde, l'huile et les herbes. Mélangez, salez et poivrez. Incorporez les dés de légumes et mélangez.",5,11,56
+serve,"A l'aide d'un emporte-pièce, dressez le tartare de légumes sur une assiette de service. Dégustez immédiatement.",5,11,57
+pre_heat,Préchauffez le four à 200°C.,0,12,58
+cut,"Coupez les aubergines en 2 et creusez-les avec une cuillère pour réserver la chair. Emincez finement les blancs de poulet, et hachez la gousse d'ail.",5,12,59
+pre_cook,"Dans une poêle bien chaude avec un peu d'huile d'olive, faites revenir l'oignon et l'ail, puis ajoutez le poulet émincé et la chair des aubergines. Salez et poivrez, et faites cuire pendant 10 minutes. En fin de cuisson du poulet, ajoutez la pulpe de tomates et la crème, puis laissez cuire à feu doux pendant quelques minutes.
+Hors du feu, incorporez une poignée de fromage râpé à la farce et mélangez bien. Farcissez ensuite généreusement les aubergines, puis recouvrez-les du reste de fromage râpé.",15,12,60
+cook,Enfournez pour 30 à 35 minutes,35,12,61
+cut,"Hachez l'oignon, écrasez la gousse d'ail.",5,13,62
+pre_cook,"Faites revenir l'oignon, l'ail, le thym et le romarin dans l'huile d'olive.",5,13,63
+cook,"Coupez le potiron sans le pelez en cubes et cuisez-le à la vapeur jusqu'à ce qu'il soit tendre pendant une vingtaine de minutes.
+Mixez tous les ingrédients jusqu'à obtenir une purée fine.",20,13,64
+serve,Rectifiez l'assaisonnement à votre goût de la purée de potimarron au thym et romarin.,0,13,65
+cut,"Lavez les courgettes, coupez les extrémités et découpez des spaghettis à l'aide d'un couteau ou d'un économe.",5,14,66
+cook,Faites chauffer une poêle avec de l'huile d'olive et faites légèrement cuire les spaghettis de courgettes à feu moyen pendant 5 minutes. Salez et poivrez.,5,14,67
+serve,"Dans un saladier, mélangez délicatement les spaghettis de courgettes et le pesto. Parsemez de parmesan.",5,14,68
+cut,Épluchez les carottes et l'oignon. Rincez et coupez les tomates en 4 quartiers. Émincez finement l'oignon.,5,15,69
+pre_cook,Faites colorer le rôti sur toutes ses faces une dizaine de minutes.,10,15,70
+cook,"Ajoutez les carottes, l'oignon et les tomates. Salez, poivrez et mettez le thym. Versez le verre d'eau et fermez la cocotte. Une fois que la soupape commence à tourner, laissez cuire 20 minutes. Quand le temps est écoulé, évacuez la vapeur et ouvrez la cocotte.",20,15,71
+serve,"Découpez le rôti en tranches et déposez la viande dans un plat de service, accompagnée des légumes.",5,15,72
+pre_heat,Préchauffez le four à 180°C.,0,16,73
+prepare,Etalez la pâte brisée dans un moule à tarte et piquez-la avec une fourchette.,0,16,74
+cut,Coupez les tomates en deux et retirez le pédoncule. Nettoyez les poireaux et les coupez en tronçons.,5,16,75
+mix,"Dans un bol, fouettez les œufs, la crème, la moutarde, le thym, salez et poivrez.",5,16,76
+pre_cook,Faites revenir les poireaux dans un peu de beurre pendant 20min. Parsemez-les sur le fond de tarte avec les demi-tomates. Ajoutez le mélange du bol sur les poireaux et les tomates.,20,16,77
+cook,Enfournez 40 minutes.,40,16,78
+cut,"Pelez les oignons et émincez-les. Coupez l'échine de porc en dés. Lavez le second citron et coupez-le en fines rondelles. Lavez les figues, coupez le haut et entaillez-les en croix.",5,17,79
+mix,"Pressez le jus d'un citron. Mélangez le jus de citron, le miel, le safran et le piment. ",5,17,80
+pre_cook,Faites blondir les oignons et les dés de porc dans un filet d'huile d'olive pendant 5min.,5,17,81
+cook,"Versez la sauce et ajoutez 15 cl d'eau, du sel et du poivre. Mettez un couvercle et laissez mijoter 45min en ajoutant un peu d'eau si nécessaire. Puis ajoutez le citron en rondelles et les figues, laissez mijoter pendant 15min.",60,17,82
+prepare,Pelez et frottez la gousse d'ail sur le fond du caquelon et sur les parois. ,5,18,83
+cut,Découpez le vacherin en dés et mettez-les dans le caquelon.,5,18,84
+mix,"Dans un petit bol, mélangez la Maïzena avec une cuillère à soupe de vin blanc.",5,18,85
+pre_cook,"Faites chauffer le caquelon à feu doux puis versez le reste de vin blanc dans sur le fromage. Ajoutez ensuite le bol de Maïzena, le jus de citron et le kirsch.",5,18,86
+cook,Portez la préparation à ébullition tout en mélangeant avec une cuillère en bois jusqu'à ce que la fondue soit bien homogène.,10,18,87
+serve,Mettez le caquelon sur un réchaud au centre de la table et dégustez votre fondue fribourgeoise avec du pain.,0,18,88
+cut,Découpez le chou-fleur en tranches épaisses. Pressez le jus d'un citron.,5,19,89
+mix,"Dans un bol, mélangez l'huile d'olive, le curcuma et le jus de citron. Salez, poivrez et ajoutez un peu d'eau pour obtenir une pâte bien lisse.",5,19,90
+pre_cook,Déposez les tranches de chou-fleur sur une plaque de four et badigeonnez-les de pâte de curcuma sur les deux faces à l'aide d'un pinceau.,5,19,91
+cook,Enfournez à mi-hauteur et faites cuire pendant 10 à 12 minutes en mode grill. Retournez les tranches de chou-fleur à la mi-cuisson.,10,19,92
+serve,Sortez du four et dégustez votre chou-fleur rôti au curcuma.,0,19,93
+prepare,"Dans une casserole, portez 1 litre d’eau salée à ébullition.",10,20,94
+cut,Découpez le chorizo et les tomates séchées en petits morceaux,5,20,95
+cook,"Versez en pluie la semoule et mélangez sur feu doux pendant 5 minutes, jusqu’à ce que la polenta se détache des parois",5,20,96
+serve,"ajoutez le chorizo et les tomates à la polenta. Saupoudrez de parmesan râpé, ajoutez du persil ciselé finement et dégustez votre polenta au chorizo.",5,20,97
+prepare,"Préparez la panure épicée dans un plat en mélangeant la farine, l'ail séché, l'origan séché, l'oignon séché, le paprika en poudre ainsi que le sel et le poivre.",10,21,98
+mix,"Dans une assiette creuse, versez le lait et cassez l'œuf entier, battez le mélange",10,21,99
+pre_cook,"Pour avoir une belle panure, passez successivement les pilons de poulet dans le mélange lait/œuf puis dans le mélange farine/épices.",10,21,100
+cook,"Pour la cuisson de vos pilons de poulet façon KFC, faites chauffer l'huile de friture à 160°C et plongez-y les morceaux de poulet pendant 10 à 12 minutes. Une fois dorés, déposez les sur du papier absorbant avant de les servir chauds.",15,21,101
+cut,Hachez finement la ciboulette.,5,22,102
+pre_cook,Faites fondre un morceau de beurre dans la poêle.,0,22,103
+cook,"Déposez la galette, laissez cuire 1 min. Etalez ensuite la crème, ajoutez le saumon, et la ciboulette.",5,22,104
+serve,"Salez, poivrez, refermez la galette, c'est prêt !",0,22,105
+pre_heat,Préchauffez le four à 200°C,0,23,106
+prepare,"Faites cuire les pommes de terre dans une casserole pendant une vingtaine de minutes, il faut qu'elles soient encore un peu fermes. Lavez les courgettes et épluchez les pommes de terre et les oignons.",25,23,107
+cut,"Coupez les pommes de terre en rondelles. Coupez les courgettes en rondelles. Coupez aussi les oignons en rondelles. Enfin, faites de même avec la mozzarella.",15,23,108
+pre_cook,"Dans un plat à gratin, superposez les rondelles de pommes de terre, de courgettes, d'oignons et de mozzarella. Nappez de crème fraîche, salez poivrez.",5,23,109
+cook,Parsemez de gruyère râpé et enfournez pour 25 minutes.,25,23,110
+pre_heat,Préchauffez votre four à 180 °C.,0,24,111
+prepare,Placez à l'intérieur du poulet un brin de thym et de romarin. Ajoutez le laurier. Salez et poivrez. Arrosez le poulet de deux cuillères d'huile. Mettez-le dans un plat allant au four.,5,24,112
+cut,Pelez les têtes d'ail et coupez-les en deux. Coupez les citrons en rondelles.,5,24,113
+mix,"Incorporez l'ail et les citrons dans le plat, salez et poivrez. Versez un demi-verre d'eau et ajoutez le reste de thym et de romarin. Arrosez du reste d'huile.",5,24,114
+cook,Enfournez pendant 45 minutes. Retournez le poulet au bout de 25 min,45,24,115

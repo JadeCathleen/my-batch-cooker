@@ -10,23 +10,20 @@
     <%= link_to 'Valider', batch_menu_path(@batch_menu) %>
   </div>
 
-  <% @recipes.each do |recipe| %>
-    <%#= link_to recipe_path(recipe), class: 'card', data_recipe_selection_target do %>
-    <div class="card" data-recipe-selection-target = "recipe">
-    <span data-action="click->recipe-selection#selectRecipe"
-          data-id="<%= recipe.id %>"
-          data-batch-id="<%= @batch_menu.id %>">+ add recipe</span>
-      <% if recipe.photo.attached? %>
-        <%= cl_image_tag recipe.photo.key, width: 200 %>
-      <% end %>
-      <%= recipe.name %>
-      <%= recipe.description %>
-
-      <%# <%= simple_form_for(@recipes_list, url: batch_menu_recipes_lists_path(current_user.batch_menus.last)) do |f| %>
-        <%# <%= f.input :recipe_id, input_html: { value: recipe.id }  %>
-        <%# <%= f.input :batch_menu_id, value: current_user.batch_menus.last.id %>
-        <%# <%= f.submit %>
-      <%# <% end %>
-    </div>
-  <% end %>
+  <div class="cards">
+    <% @recipes.each do |recipe| %>
+      <%#= link_to recipe_path(recipe), class: 'card', data_recipe_selection_target do %>
+      <div class="card-link card-link-infos" data-recipe-selection-target = "recipe">
+        <span data-action="click->recipe-selection#selectRecipe"
+              data-id="<%= recipe.id %>"
+              data-batch-id="<%= @batch_menu.id %>">+ add recipe</span>
+          <% if recipe.photo.attached? %>
+            <%= cl_image_tag recipe.photo.key %>
+          <% end %>
+              <div class="description+name">
+                <p><%= recipe.name %></p>
+              </div>
+      </div>
+    <% end %>
+  </div>
 </div>
