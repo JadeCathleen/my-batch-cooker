@@ -8,6 +8,15 @@
 require 'csv'
 require 'open-uri'
 
+puts "Cleaning database..."
+
+Recipe.destroy_all
+Ingredient.destroy_all
+PreparationStep.destroy_all
+IngredientQuantity.destroy_all
+
+
+
 csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 # Recipes seed
 
