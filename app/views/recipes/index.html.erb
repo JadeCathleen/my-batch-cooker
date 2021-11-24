@@ -1,9 +1,16 @@
-<% @recipes.each do |recipe| %>
-  <%= link_to recipe_path(recipe), class: 'card' do %>
-    <% if recipe.photo.attached? %>
-      <%= cl_image_tag recipe.photo.key, width: 200 %>
+  <div class="cards">
+    <% @recipes.each do |recipe| %>
+      <%= link_to recipe_path(recipe), class: 'card-link' do %>
+        <div class='card-link-infos'>
+          <div class="description+name">
+            <p><%= recipe.name %></p>
+          </div>
+        </div>
+        <% if recipe.photo.attached? %>
+          <%= cl_image_tag recipe.photo.key %>
+        <% else %>
+          <%# Une image de base %>
+        <% end %>
+      <% end %>
     <% end %>
-    <%= recipe.name %>
-    <%= recipe.description %>
-  <% end %>
-<% end %>
+  </div>
