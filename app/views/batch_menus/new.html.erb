@@ -1,0 +1,18 @@
+  <%= simple_form_for(@batch_menu) do |f| %>
+    <%= f.input :nb_of_people %>
+    <%= f.input :monday_lunch %>
+    <%= f.input :monday_dinner %>
+    <%= f.input :tuesday_lunch %>
+    <%= f.input :tuesday_dinner %>
+    <%= f.input :wednesday_lunch %>
+    <%= f.input :wednesday_dinner %>
+    <%= f.input :thursday_lunch %>
+    <%= f.input :thursday_dinner %>
+    <%= f.input :friday_lunch %>
+    <%= f.input :friday_dinner %>
+    <%= f.input :saturday_lunch %>
+    <%= f.input :saturday_dinner %>
+    <%= f.input :sunday_lunch %>
+    <%= f.input :sunday_dinner %>
+    <%= f.submit 'Valider', class: 'btn btn-flat' %>
+  <% end %>

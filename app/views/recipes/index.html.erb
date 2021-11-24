@@ -1,16 +1,29 @@
+<div class="container" data-controller="recipe-selection">
+  <div class="card lists-container">
+    <h4 class='text-center'>Mes recettes</h4>
+    <div class="card-recipes-list" data-recipe-selection-target = "content">
+      <% @recipes_lists.each do |association| %>
+        <p><%= association.recipe.name %></p>
+        <%= link_to 'Supprimer', recipes_list_path(association), method: :delete %>
+      <% end %>
+    </div>
+    <%= link_to 'Valider', batch_menu_path(@batch_menu) %>
+  </div>
+
   <div class="cards">
     <% @recipes.each do |recipe| %>
-      <%= link_to recipe_path(recipe), class: 'card-link' do %>
-        <div class='card-link-infos'>
-          <div class="description+name">
-            <p><%= recipe.name %></p>
-          </div>
-        </div>
-        <% if recipe.photo.attached? %>
-          <%= cl_image_tag recipe.photo.key %>
-        <% else %>
-          <%# Une image de base %>
-        <% end %>
-      <% end %>
+      <%#= link_to recipe_path(recipe), class: 'card', data_recipe_selection_target do %>
+      <div class="card-link card-link-infos" data-recipe-selection-target = "recipe">
+        <span data-action="click->recipe-selection#selectRecipe"
+              data-id="<%= recipe.id %>"
+              data-batch-id="<%= @batch_menu.id %>">+ add recipe</span>
+          <% if recipe.photo.attached? %>
+            <%= cl_image_tag recipe.photo.key %>
+          <% end %>
+              <div class="description+name">
+                <p><%= recipe.name %></p>
+              </div>
+      </div>
     <% end %>
   </div>
+</div>
