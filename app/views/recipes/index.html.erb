@@ -1,9 +1,32 @@
-<% @recipes.each do |recipe| %>
-  <%= link_to recipe_path(recipe), class: 'card' do %>
-    <% if recipe.photo.attached? %>
-      <%= cl_image_tag recipe.photo.key, width: 200 %>
-    <% end %>
-    <%= recipe.name %>
-    <%= recipe.description %>
+<div class="container" data-controller="recipe-selection">
+  <div class="card lists-container">
+    <h4 class='text-center'>Mes recettes</h4>
+    <div class="card-recipes-list" data-recipe-selection-target = "content">
+      <% @recipes_lists.each do |association| %>
+        <p><%= association.recipe.name %></p>
+        <%= link_to 'Supprimer', recipes_list_path(association), method: :delete %>
+      <% end %>
+    </div>
+    <%= link_to 'Valider', batch_menu_path(@batch_menu) %>
+  </div>
+
+  <% @recipes.each do |recipe| %>
+    <%#= link_to recipe_path(recipe), class: 'card', data_recipe_selection_target do %>
+    <div class="card" data-recipe-selection-target = "recipe">
+    <span data-action="click->recipe-selection#selectRecipe"
+          data-id="<%= recipe.id %>"
+          data-batch-id="<%= @batch_menu.id %>">+ add recipe</span>
+      <% if recipe.photo.attached? %>
+        <%= cl_image_tag recipe.photo.key, width: 200 %>
+      <% end %>
+      <%= recipe.name %>
+      <%= recipe.description %>
+
+      <%# <%= simple_form_for(@recipes_list, url: batch_menu_recipes_lists_path(current_user.batch_menus.last)) do |f| %>
+        <%# <%= f.input :recipe_id, input_html: { value: recipe.id }  %>
+        <%# <%= f.input :batch_menu_id, value: current_user.batch_menus.last.id %>
+        <%# <%= f.submit %>
+      <%# <% end %>
+    </div>
   <% end %>
-<% end %>
+</div>

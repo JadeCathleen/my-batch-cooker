@@ -5,9 +5,13 @@ Rails.application.routes.draw do
   resources :recipes, only: [:index, :show]
 
   resources :batch_menus, only: [:new, :create, :show] do
-    member do
-      patch :associate_recipes # ici on affichera l'index des recettes pour les associer
-    end
+    resources :recipes_lists, only: [:create, :update]
+    # member do
+    #   patch :associate_recipes # ici on affichera l'index des recettes pour les associer
+    # end
     # patch :associate_recipes, on: :member # ici on affichera l'index des recettes pour les associer
   end
+
+  resources :recipes_lists, only: [:destroy]
+
 end
