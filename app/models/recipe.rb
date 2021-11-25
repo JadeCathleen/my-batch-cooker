@@ -15,4 +15,5 @@ class Recipe < ApplicationRecord
   def cook_time
     preparation_steps.where(action_verb: :cook).pluck(:time).sum
   end
+
 end
