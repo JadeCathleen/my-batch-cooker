@@ -7,7 +7,7 @@
           <% if details[:unit_category] == 'pincée' %>
             <p><strong><%= ingredient %></strong></p>
           <% else %>
-            <p><strong><%= ingredient %></strong>: <%= details[:quantity] %> <em><%= details[:unit_category].pluralize(details[:quantity].to_i) %></em></p>
+            <p><strong><%= ingredient %></strong>: <%= details[:quantity] %> <em><%= details[:unit_category] %></em></p>
           <% end %>
           </li>
         <% end %>
