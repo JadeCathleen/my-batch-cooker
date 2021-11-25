@@ -102,3 +102,9 @@
  letter-spacing: 10px;
  text-decoration: none;
 }
+
+.lists-container {
+  position: sticky;
+  top: 50px;
+  z-index: 100;
+}
