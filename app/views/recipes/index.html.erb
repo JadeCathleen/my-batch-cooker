@@ -1,6 +1,7 @@
 <div class="container" data-controller="recipe-selection">
   <div class="card lists-container">
     <h4 class='text-center'>Mes recettes</h4>
+    <p>Choisissez <%= @nb_of_meals %> recettes</p>
     <div class="card-recipes-list" data-recipe-selection-target = "content">
       <% @recipes_lists.each do |association| %>
         <p><%= association.recipe.name %></p>
@@ -20,7 +21,9 @@
                 <p><%= link_to "#{recipe.name}", recipe_path(recipe)%></p>
                 <span class="add-btn" data-action="click->recipe-selection#selectRecipe"
                 data-id="<%= recipe.id %>"
-                data-batch-id="<%= @batch_menu.id %>">+</span>
+                data-batch-id="<%= @batch_menu.id %>">
+                <i class="fas fa-plus-circle"></i>
+                </span>
               </div>
       </div>
     <% end %>
