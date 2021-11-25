@@ -1,0 +1,31 @@
+.meal-time-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.meal-time-wrapper label {
+//  margin: 16px;
+}
+
+// .form-check-label {
+//   position: absolute;
+//   transform: scale(0);
+// }
+
+.form-check-label {
+  display: block;
+  cursor: pointer;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 12px;
+  text-align: left;
+  padding: 10px 10px 30px 10px;
+  border: 1px solid #EAEAEA;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.form-check-label:checked + label {
+  color: white !important;
+}
