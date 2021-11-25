@@ -25,9 +25,9 @@
             <li class="nav-item dropdown">
               <span id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup=true aria-expanded=false><%= current_user.email %></span>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Action", "#", class: "dropdown-item" %>
-                <%= link_to "Another action", "#", class: "dropdown-item" %>
-                <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+                <%= link_to "Une Action", "#", class: "dropdown-item" %>
+                <%= link_to "Une Autre Action", "#", class: "dropdown-item" %>
+                <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
               </div>
                  <%#= link_to "#{current_user.email}", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               <%# <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown"> %>
@@ -41,11 +41,11 @@
               <%= link_to "Login", new_user_session_path, class: "nav-link" %>
             </li>
           <% end %>
-          <%# <button class="search-form-toggle" data-search-form-toggle="">
-            <svg class="search-icon">
-              <use xlink:href="#icon-search"></use>
-            </svg>
-          </button> %>
+            <%# <button class="search-form-toggle" data-search-form-toggle="">
+              <svg class="search-icon">
+                <use xlink:href="#icon-search"></use>
+              </svg>
+            </button> %>
         </ul>
       </div>
   </div>

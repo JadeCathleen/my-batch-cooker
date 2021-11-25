@@ -1,38 +1,38 @@
   <%= simple_form_for(@batch_menu) do |f| %>
     <div>
-      <%= f.input :nb_of_people, label: 'How many people will experience your top chef skills?'  %>
+      <%= f.input :nb_of_people, label: 'Combien de personnes vont avoir droit à vos talents de chef toqué ?'  %>
     </div>
       <div id="nb-of-meals">
-        </h2> Select how many meals you want to batch cook !<h2>
+        </h2> Choisissez le nombre de plats que vous voulez faire en un batch !<h2>
       </div>
     <div class="meal-time-wrapper">
       <div>
-        <%= f.input :monday_lunch %>
-        <%= f.input :monday_dinner %>
+        <%= f.input :monday_lunch, label: 'lundi - déjeuner' %>
+        <%= f.input :monday_dinner, label: 'lundi - dîner' %>
       </div>
       <div>
-        <%= f.input :tuesday_lunch %>
-        <%= f.input :tuesday_dinner %>
+        <%= f.input :tuesday_lunch, label: 'mardi - déjeuner' %>
+        <%= f.input :tuesday_dinner, label: 'mardi - dîner' %>
       </div>
       <div>
-        <%= f.input :wednesday_lunch %>
-        <%= f.input :wednesday_dinner %>
+        <%= f.input :wednesday_lunch, label: 'mercredi - déjeuner' %>
+        <%= f.input :wednesday_dinner, label: 'mercredi - dîner' %>
       </div>
       <div>
-        <%= f.input :thursday_lunch %>
-        <%= f.input :thursday_dinner %>
+        <%= f.input :thursday_lunch, label: 'jeudi - déjeuner' %>
+        <%= f.input :thursday_dinner, label: 'jeudi - dîner' %>
       </div>
       <div>
-        <%= f.input :friday_lunch %>
-        <%= f.input :friday_dinner %>
+        <%= f.input :friday_lunch, label: 'vendredi - déjeuner' %>
+        <%= f.input :friday_dinner, label: 'vendredi - dîner' %>
       </div>
       <div>
-        <%= f.input :saturday_lunch %>
-        <%= f.input :saturday_dinner %>
+        <%= f.input :saturday_lunch, label: 'samedi - déjeuner' %>
+        <%= f.input :saturday_dinner, label: 'samedi - dîner' %>
       </div>
       <div>
-        <%= f.input :sunday_lunch %>
-        <%= f.input :sunday_dinner %>
+        <%= f.input :sunday_lunch, label: 'dimanche - déjeuner' %>
+        <%= f.input :sunday_dinner, label: 'dimanche - dîner' %>
       </div>
     </div>
     <div class="valid-batch">
