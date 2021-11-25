@@ -20,7 +20,9 @@
                 <p><%= link_to "#{recipe.name}", recipe_path(recipe)%></p>
                 <span class="add-btn" data-action="click->recipe-selection#selectRecipe"
                 data-id="<%= recipe.id %>"
-                data-batch-id="<%= @batch_menu.id %>">+</span>
+                data-batch-id="<%= @batch_menu.id %>">
+                <i class="fas fa-plus-circle"></i>
+                </span>
               </div>
       </div>
     <% end %>
