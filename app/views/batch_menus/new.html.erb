@@ -2,6 +2,9 @@
     <div>
       <%= f.input :nb_of_people, label: 'How many people will experience your top chef skills?'  %>
     </div>
+      <div id="nb-of-meals">
+        </h2> Select how many meals you want to batch cook !<h2>
+      </div>
     <div class="meal-time-wrapper">
       <div>
         <%= f.input :monday_lunch %>
@@ -33,6 +36,6 @@
       </div>
     </div>
     <div class="valid-batch">
-    <%= f.submit "lessssgoooooooo !", class: 'btn btn-flat', id:'lessgo-button' %>
+    <%= f.submit "GO !", class: 'btn btn-flat', id:'go-button' %>
     </div>
   <% end %>

@@ -1,8 +1,21 @@
 .batch_menu_nb_of_people {
-  padding-top: 50px;
+  padding-top: 70px;
   text-align: center;
   font-weight: bold;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
 }
 .form-control {
   background-color: white;
+  padding: 15px;
+  text-align: center;
+  width: 32%;
+}
+
+#nb-of-meals {
+  padding-top: 50px;
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: 30px;
 }
