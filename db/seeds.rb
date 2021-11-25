@@ -1,3 +1,4 @@
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -8,14 +9,13 @@
 require 'csv'
 require 'open-uri'
 
-puts "Cleaning database..."
-
-IngredientQuantity.destroy_all
-PreparationStep.destroy_all
-Recipe.destroy_all
-Ingredient.destroy_all
-
-
+if Rails.env.development?
+  puts "Cleaning database..."
+  IngredientQuantity.destroy_all
+  PreparationStep.destroy_all
+  Recipe.destroy_all
+  Ingredient.destroy_all
+end
 
 csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 # Recipes seed

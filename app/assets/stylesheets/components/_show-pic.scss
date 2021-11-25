@@ -1,0 +1,13 @@
+.show-container  img {
+  height: 300px;
+  width: 500px;
+  // width: auto;
+}
+
+.show-description {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+  position: relative;
+}
