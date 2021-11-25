@@ -9,6 +9,7 @@
 require 'csv'
 require 'open-uri'
 
+
 if Rails.env.development?
   puts "Cleaning database..."
   IngredientQuantity.destroy_all
@@ -16,6 +17,7 @@ if Rails.env.development?
   Recipe.destroy_all
   Ingredient.destroy_all
 end
+User.create!(email: 'test@test.com', password: 'qwerty')
 
 csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 # Recipes seed

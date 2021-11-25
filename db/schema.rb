@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 2021_11_23_143954) do
   create_table "preparation_steps", force: :cascade do |t|
     t.string "content"
     t.integer "action_verb", default: 0
-    t.time "time"
+    t.integer "time"
     t.bigint "recipe_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
