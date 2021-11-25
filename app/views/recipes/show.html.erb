@@ -1,7 +1,22 @@
-  <% if @recipe.photo.attached? %>
-    <%= cl_image_tag @recipe.photo.key %>
-  <% end %>
-  <%= @recipe.name %>
-  <%= @recipe.description %>
-  <p>Temps de préparation : <%= @recipe.prep_time.strftime('%M min') %></p>
-  <p>Temps de cuisson : <%= @recipe.cook_time.strftime('%M min') %></p>
+<div class="show-container">
+  <div>
+    <% if @recipe.photo.attached? %>
+      <%= cl_image_tag @recipe.photo.key %>
+    <% end %>
+  </div>
+  <div class="show-description">
+    <h1>
+    <%= @recipe.name %>
+    </h1>
+    <br>
+    <h6><strong>
+    <%= @recipe.description %>
+    </strong></h6>
+    <br>
+    <h6>Temps de préparation : <%= @recipe.prep_time.strftime('%M min') %></h6>
+    <h6>Temps de cuisson : <%= @recipe.cook_time.strftime('%M min') %></h6>
+    <div class="description-back" >
+    <%= link_to recipes_path, :class=> "back-button" do %><i class="fas fa-arrow-left" aria-hidden="true" target="_blank"></i><% end %>
+    </div>
+  </div>
+</div>
