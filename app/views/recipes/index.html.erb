@@ -13,16 +13,17 @@
 
   <div class="cards">
     <% @recipes.each do |recipe| %>
-      <%#= link_to recipe_path(recipe), class: 'card', data_recipe_selection_target do %>
       <div class="card-link card-link-infos" data-recipe-selection-target = "recipe">
-        <span data-action="click->recipe-selection#selectRecipe"
-              data-id="<%= recipe.id %>"
-              data-batch-id="<%= @batch_menu.id %>">+ add recipe</span>
           <% if recipe.photo.attached? %>
             <%= cl_image_tag recipe.photo.key %>
           <% end %>
-              <div class="description+name">
-                <p><%= recipe.name %></p>
+              <div class="description-name">
+                <p><%= link_to "#{recipe.name}", recipe_path(recipe)%></p>
+                <span class="add-btn" data-action="click->recipe-selection#selectRecipe"
+                data-id="<%= recipe.id %>"
+                data-batch-id="<%= @batch_menu.id %>">
+                <i class="fas fa-plus-circle"></i>
+                </span>
               </div>
       </div>
     <% end %>
