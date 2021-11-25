@@ -57,6 +57,7 @@
     &:hover {
       .description-name {
         opacity: 1;
+        transition: 0.4s all ease;
       }
       img {
         opacity: 0.6;
