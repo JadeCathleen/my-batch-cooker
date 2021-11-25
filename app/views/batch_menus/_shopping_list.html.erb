@@ -1,0 +1,16 @@
+<div>
+  <% shopping_list.each do |category, elements| %>
+    <h3><%= category %></h3>
+      <ul>
+        <% elements.each do |ingredient, details| %>
+          <li>
+          <% if details[:unit_category] == 'pincée' %>
+            <p><strong><%= ingredient %></strong></p>
+          <% else %>
+            <p><strong><%= ingredient %></strong>: <%= details[:quantity] %> <em><%= details[:unit_category].pluralize(details[:quantity].to_i) %></em></p>
+          <% end %>
+          </li>
+        <% end %>
+      </ul>
+  <% end %>
+</div>
