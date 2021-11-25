@@ -19,20 +19,9 @@ class BatchMenusController < ApplicationController
     end
   end
 
-  # def update
-  #   @batch_menu = BatchMenu.find(params[:id])
-  #   @meals_list = @batch_menu.attributes.select { |k, v| v == true}.keys
-  #   @nb_of_meals_left = @meals_list.count - @batch_menu.recipes.count
-  #   raise
-  #   if @batch_menu.recipes_lists.count < @meals_list.count
-  #     @nb_of_meal_left.times do
-  #       Recipes_list.create(batch_menu: @batch_menu, recipe: @batch_menu.recipe.to_a.sample)
-  #     end
-  #   else
-  #     @batch_menu.update(batch_menu_params)
-  #     redirect_to batch_menu_path(@batch_menu)
-  #   end
-  # end
+  def associate_prep_steps
+    @batch_menu = BatchMenu.find(params[:id])
+  end
 
   private
 
