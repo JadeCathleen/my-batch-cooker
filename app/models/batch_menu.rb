@@ -3,5 +3,5 @@ class BatchMenu < ApplicationRecord
   has_many :recipes, through: :recipes_lists
   validates :name, length: { maximum: 60,
   too_long: "%{count} characters is the maximum allowed" }
-  validates :nb_of_people, numericality: { less_than: 5 }
+  validates :nb_of_people, numericality: {greater_than_or_equal_to: 1, less_than: 5 }
 end
