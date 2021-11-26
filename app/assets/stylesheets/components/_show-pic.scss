@@ -1,6 +1,7 @@
 .show-container  img {
-    width:50vw;
-    height: 70vh;
+    margin-top: 60px;
+    width: 30vw;
+    height: 50vh;
     overflow: hidden;
 }
 
@@ -8,6 +9,6 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
-  position: relative;
+  padding: 50px 60px;
+  // position: relative;
 }

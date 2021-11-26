@@ -1,4 +1,7 @@
 <div class="show-container">
+    <div>
+    <%= link_to recipes_path, :class=> "back-button" do %><i class="fas fa-arrow-left" aria-hidden="true" target="_blank"></i><% end %>
+    </div>
   <div>
     <% if @recipe.photo.attached? %>
       <%= cl_image_tag @recipe.photo.key %>
@@ -13,18 +16,20 @@
     <%= @recipe.description %>
     </strong></h6>
     <br>
-    <h6>Temps de préparation : <%= distance_of_time_in_words( Time.now, @recipe.prep_time.minutes.from_now ) %></h6>
+    <h6><strong>Temps de préparation :</strong>
+    <%= distance_of_time_in_words( Time.now, @recipe.prep_time.minutes.from_now ) %></h6>
     <%# <h6>Temps de cuisson : <%= @recipe.cook_time.strftime('%M min') %></h6>
-    <h6>Etapes de préparation: </h6>
-    <ul>
-      <% @recipe.preparation_steps.each do |step|%>
-        <li>
-          <%= step.content %>
-        </li>
-      <% end %>
-    </ul>
-    <div class="description-back" >
-    <%= link_to recipes_path, :class=> "back-button" do %><i class="fas fa-arrow-left" aria-hidden="true" target="_blank"></i><% end %>
+    <div>
+    <h6><strong>Etapes de préparation:</strong> </h6>
+    <div>
+      <ul>
+        <% @recipe.preparation_steps.each do |step|%>
+          <li>
+            <%= step.content %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
     </div>
   </div>
 </div>
