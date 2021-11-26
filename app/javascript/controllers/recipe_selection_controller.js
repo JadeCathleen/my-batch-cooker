@@ -23,7 +23,7 @@ export default class extends Controller {
       body: formData
     }).then(response => response.json())
     .then((data) => {
-      this.contentTarget.insertAdjacentHTML('beforeend', `<p>${data.recipe_name}</p><a rel="nofollow" data-method="delete" href="/recipes_lists/${data.recipes_list_id}">Supprimer</a>`)
+      this.contentTarget.insertAdjacentHTML('beforeend', `<p>${data.recipe_name} <a rel="nofollow" data-method="delete" href="/recipes_lists/${data.recipes_list_id}"><i class="fas fa-times"></i></a></p>`)
     })
   }
 }

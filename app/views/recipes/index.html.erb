@@ -1,14 +1,17 @@
 <div class="container" data-controller="recipe-selection">
-  <div class="card lists-container">
+  <div class="card lists-container mt-4">
     <h4 class='text-center'>Mes recettes</h4>
-    <p>Choisissez <%= @nb_of_meals %> recettes</p>
+    <p><em>Choisissez <%= @nb_of_meals %> recettes</em></p>
     <div class="card-recipes-list" data-recipe-selection-target = "content">
       <% @recipes_lists.each do |association| %>
-        <p><%= association.recipe.name %></p>
-        <%= link_to 'Supprimer', recipes_list_path(association), method: :delete %>
+        <p><%= association.recipe.name %>
+        <%= link_to recipes_list_path(association), method: :delete do %>
+          <i class="fas fa-times"></i>
+        <% end %>
+        </p>
       <% end %>
     </div>
-    <%= link_to 'Valider', batch_menu_path(@batch_menu) %>
+    <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-primary', style: 'color:white;' %>
   </div>
 
   <div class="cards">
@@ -28,4 +31,5 @@
       </div>
     <% end %>
   </div>
+
 </div>

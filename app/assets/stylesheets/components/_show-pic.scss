@@ -1,13 +1,14 @@
 .show-container  img {
-  height: 300px;
-  width: 500px;
-  // width: auto;
+    margin-top: 60px;
+    width: 30vw;
+    height: 50vh;
+    overflow: hidden;
 }
 
 .show-description {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 20px;
-  position: relative;
+  padding: 50px 60px;
+  // position: relative;
 }

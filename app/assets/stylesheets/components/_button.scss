@@ -9,6 +9,7 @@
   font-weight: lighter;
   font-family: "Galano Grotesque Regular",sans-serif;
   text-decoration: none;
+  // margin-left: 10px;
 }
 
 .btn-home:hover {
@@ -31,6 +32,8 @@
 
 .btn-transparent:hover {
   opacity: 1;
+  background: black;
+  color: white;
 }
 
 #go-button{
