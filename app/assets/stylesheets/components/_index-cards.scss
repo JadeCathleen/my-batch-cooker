@@ -16,7 +16,6 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     text-decoration: none;
     img {
-      // z-index: -10;
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -29,7 +28,6 @@
   .card-link-infos {
     display: flex;
     align-items: center;
-    // z-index: 20;
     height: 20vw;
     position: relative;
     width: 20vw;
@@ -42,13 +40,6 @@
       right:20px;
       cursor: pointer;
     }
-
-     .dtl-btn {
-      position: absolute;
-      left: 10px;
-      right:10px;
-      cursor: pointer;
-    }
     .description-name {
       opacity: 0;
     }
@@ -57,8 +48,10 @@
     }
     &:hover {
       .description-name {
-        opacity: 1;
+        opacity: 0.9;
         transition: 0.4s all ease;
+        margin-left: 4px;
+        margin-right: 4px;
       }
       img {
         opacity: 0.6;
@@ -81,7 +74,6 @@
     top: 10px;
     margin-top: 20px;
     margin-right: 1100px;
-    z-index:1;
     border-radius: 3px;
     box-shadow: 0 0 5px rgb(230, 230, 230);
     text-align: center;
@@ -107,7 +99,7 @@
 
 .card-link-infos p {
  font-family: 'Didact Gothic', sans-serif;
- letter-spacing: 10px;
+ letter-spacing: 3px;
  text-decoration: none;
 }
 
