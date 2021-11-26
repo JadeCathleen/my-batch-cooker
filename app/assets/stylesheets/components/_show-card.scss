@@ -1,0 +1,34 @@
+
+.show-card {
+    overflow: hidden;
+    width: 70vw;
+    min-height: 70vh;
+    border-radius: 5px;
+    background-color:white;
+    box-shadow: 0 0 5px rgb(230, 230, 230);
+    border: 1px solid rgb(230, 230, 230);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    opacity: 95%;
+    margin: 0;
+  img {
+    width: 45vw;
+    height: 100%;
+    object-fit: cover;
+  }
+  .description {
+    text-justify: auto;
+  }
+  .show-description {
+    width: 30vw;
+    height: 70vh;
+    margin: 30px 30px;
+    padding: 0;
+  }
+  .scroll {
+    max-height: 250px;
+    overflow-y: auto;
+}
+}

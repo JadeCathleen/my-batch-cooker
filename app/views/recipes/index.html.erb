@@ -21,7 +21,7 @@
             <%= cl_image_tag recipe.photo.key %>
           <% end %>
               <div class="description-name">
-                <p><%= link_to "#{recipe.name}", recipe_path(recipe)%></p>
+                <p><%= link_to "#{recipe.name}", recipe_path(recipe) %></p>
                 <span class="add-btn" data-action="click->recipe-selection#selectRecipe"
                 data-id="<%= recipe.id %>"
                 data-batch-id="<%= @batch_menu.id %>">
@@ -31,5 +31,3 @@
       </div>
     <% end %>
   </div>
-
-</div>

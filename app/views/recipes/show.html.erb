@@ -1,38 +1,40 @@
-<div class="show-container">
-    <div>
-    <%= link_to recipes_path, :class=> "back-button" do %><i class="fas fa-arrow-left" aria-hidden="true" target="_blank"></i><% end %>
-    </div>
-  <div>
-    <% if @recipe.photo.attached? %>
-      <%= cl_image_tag @recipe.photo.key %>
-    <% end %>
-  </div>
-  <div class="show-description">
-    <h1>
-    <%= @recipe.name %>
-    </h1>
-    <br>
-    <h6><strong>
-    <%= @recipe.description %>
-    </strong></h6>
-    <br>
-    <h6><strong>Temps de préparation :</strong>
-    <%# <%= distance_of_time_in_words( Time.now, @recipe.prep_time.minutes.from_now ) %>
-    <%= "#{@recipe.prep_time} minutes" %>
-    <h6><strong>Temps de cuisson :</strong>
-    <%# <%= distance_of_time_in_words( Time.now, @recipe.prep_time.minutes.from_now ) %>
-    <%= "#{@recipe.cook_time} minutes" %></h6>
-    <div>
-    <h6><strong>Etapes de préparation:</strong> </h6>
-    <div>
-      <ol>
-        <% @recipe.preparation_steps.each do |step|%>
-          <li>
-            <%= step.content %>
-          </li>
+<body style="background-color:white">
+  <div class="container d-flex justify-content-center align-items-center flex-column my-4">
+    <div class="show-card">
+      <div>
+        <% if @recipe.photo.attached? %>
+          <%= cl_image_tag @recipe.photo.key %>
         <% end %>
-      </ol>
+      </div>
+      <div class="show-description">
+        <h2 class='mb-4'>
+          <%= @recipe.name %>
+        </h2>
+        <h6 class=" description mb-3"><strong>
+          <%= @recipe.description %>
+        </strong></p>
+        <div class="recipe-time my-1">
+          <h6><strong>Temps de préparation :</strong>
+          <%= "#{@recipe.prep_time} minutes" %></h6>
+          <h6><strong>Temps de cuisson :</strong>
+          <%= "#{@recipe.cook_time} minutes" %></h6>
+        </div>
+        <div class='prep-steps scroll mt-5'>
+          <h6><strong>Etapes de préparation:</strong> </h6>
+          <div>
+            <ol>
+              <% @recipe.preparation_steps.each do |step|%>
+                <li class='mb-3'>
+                  <%= step.content %>
+                </li>
+              <% end %>
+            </ol>
+          </div>
+        </div>
+      </div>
     </div>
+    <div>
+    <%= link_to recipes_path, :class=> "btn btn-home my-4" do %>Retour<% end %>
     </div>
   </div>
-</div>
+</body>
