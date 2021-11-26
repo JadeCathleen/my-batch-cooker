@@ -2,8 +2,10 @@
   display: flex;
   flex-wrap: wrap;
   margin: 20px 5vw;
-  // z-index:1;
-  .card-link {
+  z-index:1;
+}
+
+.card-link {
     height: 20vw;
     width: 20vw;
     position: relative;
@@ -66,7 +68,6 @@
       font-family: 'Didact Gothic', sans-serif;
     }
   }
-}
 
 .card {
     // width: 200px;

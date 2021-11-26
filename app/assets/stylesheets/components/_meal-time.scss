@@ -1,31 +1,39 @@
+.batch-new-container {
+  margin: 20px;
+}
+
 .meal-time-wrapper {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
-.meal-time-wrapper label {
-//  margin: 16px;
+.meal-time-wrapper h6 {
+  text-align: center;
+  border: solid;
+  border-color: grey;
 }
 
-// .form-check-label {
-//   position: absolute;
-//   transform: scale(0);
-// }
-
-.form-check-label {
-  display: block;
-  cursor: pointer;
-  box-sizing: border-box;
-  width: 100%;
-  font-size: 12px;
-  text-align: left;
-  padding: 10px 10px 30px 10px;
-  border: 1px solid #EAEAEA;
-  border-radius: 4px;
-  background-color: white;
+.form-check{
+  padding: 12px;
 }
 
-.form-check-label:checked + label {
+.calendar-input + label {
+    display: block;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 12px;
+    text-align: center;
+    padding: 25px;
+    /* border: 50px solid #EAEAEA; */
+    border-radius: 4px;
+    color: black;
+    /* border-color: #dbd5d5; */
+    background-color: lightgray;
+}
+
+.calendar-input:checked + label {
   color: white !important;
+  background-color: green ;
 }
