@@ -17,18 +17,21 @@
     </strong></h6>
     <br>
     <h6><strong>Temps de préparation :</strong>
-    <%= distance_of_time_in_words( Time.now, @recipe.prep_time.minutes.from_now ) %></h6>
-    <%# <h6>Temps de cuisson : <%= @recipe.cook_time.strftime('%M min') %></h6>
+    <%# <%= distance_of_time_in_words( Time.now, @recipe.prep_time.minutes.from_now ) %>
+    <%= "#{@recipe.prep_time} minutes" %>
+    <h6><strong>Temps de cuisson :</strong>
+    <%# <%= distance_of_time_in_words( Time.now, @recipe.prep_time.minutes.from_now ) %>
+    <%= "#{@recipe.cook_time} minutes" %></h6>
     <div>
     <h6><strong>Etapes de préparation:</strong> </h6>
     <div>
-      <ul>
+      <ol>
         <% @recipe.preparation_steps.each do |step|%>
           <li>
             <%= step.content %>
           </li>
         <% end %>
-      </ul>
+      </ol>
     </div>
     </div>
   </div>
