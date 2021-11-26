@@ -6,29 +6,31 @@
         input_html: { min:1, max:4, value: 1, oninput: "document.querySelector('#count').innerHTML = this.value;" }  %>
         <span id='count'>1</span>
       </div>
+      <div>
         <div id="nb-of-meals">
           <h4>Vous préparez un batch pour:</h4>
         </div>
-      <div class="meal-time-wrapper">
-        <% days = {
-          lundi: "monday",
-          mardi: "tuesday",
-          mercredi: "wednesday",
-          jeudi: "thursday",
-          vendredi: "friday",
-          samedi: "saturday",
-          dimanche: "sunday"
-        } %>
-        <% days.each do |k, v| %>
-          <div>
-            <h6><%= k %></h6>
-            <%= f.input "#{v}_lunch".to_sym,  label: 'déjeuner', input_html: { class: 'd-none calendar-input' } %>
-            <%= f.input "#{v}_dinner".to_sym, label: 'dîner',    input_html: { class: 'd-none calendar-input' } %>
-          </div>
-        <% end %>
-      </div>
-      <div class="valid-batch">
-        <%= f.submit "GO !", class: 'btn btn-flat', id:'go-button' %>
+        <div class="meal-time-wrapper">
+          <% days = {
+            lundi: "monday",
+            mardi: "tuesday",
+            mercredi: "wednesday",
+            jeudi: "thursday",
+            vendredi: "friday",
+            samedi: "saturday",
+            dimanche: "sunday"
+          } %>
+          <% days.each do |k, v| %>
+            <div>
+              <h6><%= k %></h6>
+              <%= f.input "#{v}_lunch".to_sym,  label: 'déjeuner', input_html: { class: 'd-none calendar-input' } %>
+              <%= f.input "#{v}_dinner".to_sym, label: 'dîner',    input_html: { class: 'd-none calendar-input' } %>
+            </div>
+          <% end %>
+        </div>
+        <div class="valid-batch">
+          <%= f.submit "GO !", class: 'btn btn-flat', id:'go-button' %>
+        </div>
       </div>
     <% end %>
   </div>
