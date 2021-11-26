@@ -1,0 +1,20 @@
+
+
+<%= @batch_menu.name %>
+
+<div class="calendar">
+  <div style='grid-column: 1'>Lundi</div>
+  <div style='grid-column: 2'>Mardi</div>
+  <div style='grid-column: 3'>Mercredi</div>
+  <div style='grid-column: 4'>Jeudi</div>
+  <div style='grid-column: 5'>Vendredi</div>
+  <div style='grid-column: 6'>Samedi</div>
+  <div style='grid-column: 7'>Dimanche</div>
+  <% @meals.each do |meal| %>
+    <div class="day" style='grid-row:<%=meal.calendar_row%>; grid-column:<%=meal.calendar_column%>;'>
+      <%= cl_image_tag meal.recipe.photo.key, width:200 %>
+    </div>
+  <% end %>
+</div>
+
+<%= render 'batch_menus/shopping_list', shopping_list: @batch_menu.shopping_list %>
