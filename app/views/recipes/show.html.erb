@@ -1,30 +1,30 @@
 <body style="background-color:white">
   <div class="container d-flex justify-content-center align-items-center flex-column my-4">
     <div class="show-card">
-      <div>
+      <div class="recipe-img">
         <% if @recipe.photo.attached? %>
           <%= cl_image_tag @recipe.photo.key %>
         <% end %>
       </div>
       <div class="show-description">
-        <h2 class='mb-4'>
+        <h2 class="mb-2">
           <%= @recipe.name %>
         </h2>
-        <h6 class=" description mb-3"><strong>
+        <h6 class=" description mb-2"><strong>
           <%= @recipe.description %>
         </strong></p>
-        <div class="recipe-time my-1">
+        <div class="recipe-time mb-3">
           <h6><strong>Temps de préparation :</strong>
           <%= "#{@recipe.prep_time} minutes" %></h6>
           <h6><strong>Temps de cuisson :</strong>
           <%= "#{@recipe.cook_time} minutes" %></h6>
         </div>
-        <div class='prep-steps scroll mt-5'>
+        <div class='prep-steps scroll'>
           <h6><strong>Etapes de préparation:</strong> </h6>
           <div>
             <ol>
               <% @recipe.preparation_steps.each do |step|%>
-                <li class='mb-3'>
+                <li class='mb-1'>
                   <%= step.content %>
                 </li>
               <% end %>

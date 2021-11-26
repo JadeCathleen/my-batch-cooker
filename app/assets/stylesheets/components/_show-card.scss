@@ -1,8 +1,9 @@
 
 .show-card {
     overflow: hidden;
-    width: 70vw;
-    min-height: 70vh;
+    width: 60vw;
+    min-height: 60vh;
+    max-height: 70vh;
     border-radius: 5px;
     background-color:white;
     box-shadow: 0 0 5px rgb(230, 230, 230);
@@ -14,21 +15,18 @@
     opacity: 95%;
     margin: 0;
   img {
-    width: 45vw;
+    width: 40vw;
     height: 100%;
-    object-fit: cover;
-  }
-  .description {
-    text-justify: auto;
+    object-fit: center;
   }
   .show-description {
-    width: 30vw;
-    height: 70vh;
+    height: 60vh;
     margin: 30px 30px;
     padding: 0;
+    // font-size: ;
   }
   .scroll {
-    max-height: 250px;
+    max-height: 100px;
     overflow-y: auto;
 }
 }
