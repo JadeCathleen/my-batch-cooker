@@ -83,12 +83,12 @@ ActiveRecord::Schema.define(version: 2021_11_26_101634) do
   create_table "preparation_steps", force: :cascade do |t|
     t.string "content"
     t.integer "action_verb", default: 0
-    t.integer "time", default: 0
     t.bigint "recipe_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "recipe_code"
     t.integer "prep_code"
+    t.integer "time", default: 0
     t.index ["action_verb"], name: "index_preparation_steps_on_action_verb"
     t.index ["recipe_id"], name: "index_preparation_steps_on_recipe_id"
   end
