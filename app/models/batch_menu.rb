@@ -37,4 +37,20 @@ class BatchMenu < ApplicationRecord
     end
     list
   end
+
+  def prep_list
+    list = {}
+    recipes.each do |recipe|
+      recipe.preparation_steps.each do |step|
+        if list[step.action_verb].nil?
+        list[step.action_verb] = {
+          recipe.name => step.content
+        }
+        else
+          list[step.action_verb][recipe.name] = step.content
+        end
+      end
+    end
+    list
+  end
 end

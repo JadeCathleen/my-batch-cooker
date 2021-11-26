@@ -1,0 +1,79 @@
+<h1>Préparation de mon <%= @batch_menu.name %></h1>
+      <h4>1</h4>
+<% @batch_menu.prep_list.each do |action_verb, value| %>
+  <% if action_verb == 'pre_heat' %>
+    <% value.each do |recipe, prep_step| %>
+      <ul>
+      <li><strong><%= recipe %></strong>
+      <%= prep_step %></li>
+    </ul>
+    <% end %>
+  <% end %>
+
+  <% end %>
+  <h4>2</h4>
+  <% @batch_menu.prep_list.each do |action_verb, value| %>
+  <% if action_verb == 'prepare' %>
+    <% value.each do |recipe, prep_step| %>
+      <ul>
+      <li><strong><%= recipe %></strong>
+      <%= prep_step %></li>
+    </ul>
+    <% end %>
+  <% end %>
+  <% end %>
+    <h4>3</h4>
+  <% @batch_menu.prep_list.each do |action_verb, value| %>
+  <% if action_verb == 'cut' %>
+    <% value.each do |recipe, prep_step| %>
+      <ul>
+      <li><strong><%= recipe %></strong>
+      <%= prep_step %></li>
+    </ul>
+    <% end %>
+  <% end %>
+  <% end %>
+      <h4>4</h4>
+  <% @batch_menu.prep_list.each do |action_verb, value| %>
+  <% if action_verb == 'mix' %>
+    <% value.each do |recipe, prep_step| %>
+      <ul>
+      <li><strong><%= recipe %></strong>
+      <%= prep_step %></li>
+    </ul>
+    <% end %>
+  <% end %>
+  <% end %>
+      <h4>5</h4>
+  <% @batch_menu.prep_list.each do |action_verb, value| %>
+  <% if action_verb == 'pre_cook' %>
+    <% value.each do |recipe, prep_step| %>
+      <ul>
+      <li><strong><%= recipe %></strong>
+      <%= prep_step %></li>
+    </ul>
+    <% end %>
+  <% end %>
+  <% end %>
+      <h4>6</h4>
+  <% @batch_menu.prep_list.each do |action_verb, value| %>
+  <% if action_verb == 'cook' %>
+    <% value.each do |recipe, prep_step| %>
+      <ul>
+      <li><strong><%= recipe %></strong>
+      <%= prep_step %></li>
+    </ul>
+    <% end %>
+  <% end %>
+  <% end %>
+      <h4>7</h4>
+  <% @batch_menu.prep_list.each do |action_verb, value| %>
+  <% if action_verb == 'serve' %>
+    <% value.each do |recipe, prep_step| %>
+      <ul>
+      <li><strong><%= recipe %></strong>
+      <%= prep_step %></li>
+    </ul>
+    <% end %>
+  <% end %>
+<% end %>

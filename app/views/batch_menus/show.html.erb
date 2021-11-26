@@ -17,4 +17,6 @@
   <% end %>
 </div>
 
+<%= link_to 'Cuisinez!', associate_prep_steps_batch_menu_path(@batch_menu) %>
+
 <%= render 'batch_menus/shopping_list', shopping_list: @batch_menu.shopping_list %>
