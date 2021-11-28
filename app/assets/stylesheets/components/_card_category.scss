@@ -1,0 +1,55 @@
+.card-category {
+  background-size: cover;
+  background-position: center;
+  height: 20vh;
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin: 30px auto;
+  position: relative;
+}
+
+.to-show {
+  font-family: 'Pacifico', cursive;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+.to-show:hover {
+  color: lightgray;
+}
+
+.nb-recipes {
+  opacity: 0.8;
+}
+
+.creation-date {
+  opacity: 0.8;
+  position: absolute;
+  font-size: smaller;
+  bottom: 10px;
+  right: 10px;
+  margin: 0;
+}
+
+.cross {
+  color: white;
+  opacity: 0.5;
+  position: absolute;
+  font-size: smaller;
+  top: 10px;
+  right: 10px;
+  font-size: larger;
+}
+
+.cross:hover {
+  opacity: 1;
+}
