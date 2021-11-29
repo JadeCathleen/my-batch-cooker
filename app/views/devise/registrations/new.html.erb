@@ -1,6 +1,6 @@
 <div class="login-container">
-  <div class="card-login">
-    <%= image_tag "logo.png" %>
+  <div class="card-sign-up">
+    <%= image_tag "logo-no-bckg.png" %>
     <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= f.error_notification %>
 
@@ -19,7 +19,7 @@
       </div>
 
       <div class="form-actions">
-        <%= f.button :submit, "Sign up" %>
+        <%= f.button :submit, "Inscrivez-vous" %>
       </div>
     <% end %>
 
