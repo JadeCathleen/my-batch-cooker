@@ -68,3 +68,16 @@
     border-bottom: 1px solid lightgray;
   }
 }
+
+.calendar-square {
+  // padding: 25px;
+  border-radius: 4px;
+  width: 10vw;
+  height: 17vh;
+  margin: 10px;
+  box-shadow: 0 0 15px rgb(221, 220, 220);
+}
+
+.empty {
+  background-color:#e7a8295d;
+}
