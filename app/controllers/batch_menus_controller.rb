@@ -23,6 +23,15 @@ class BatchMenusController < ApplicationController
     @batch_menu = BatchMenu.find(params[:id])
   end
 
+  def index
+    @batch_menus = BatchMenu.all
+  end
+
+  def destroy
+    @batch_menu = BatchMenu.find(params[:id])
+    @batch_menu.destroy
+  end
+
   private
 
   def batch_menu_params

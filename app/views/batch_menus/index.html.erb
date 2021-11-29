@@ -1,0 +1,19 @@
+<body class='bg-white'>
+  <div class="container d-flex justify-content-center align-items-center flex-column">
+    <h5 class="mt-4" style='color:black;'>Mes Menus</h5>
+
+    <% @batch_menus.each do |menu| %>
+      <% if !menu.recipes.nil? %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path menu.recipes.first.photo.key %>)">
+          <%= link_to batch_menu_path(menu), method: :delete do %>
+            <i class="fas fa-times cross"></i>
+          <% end %>
+          <%= link_to menu.name, batch_menus_path(menu), class:'to-show' %>
+          <p class="nb-recipes">Contient <%= menu.recipes.count %> repas</p>
+          <p class="creation-date">Créé le <%= menu.created_at.strftime('%d/%m/%Y') %></p>
+        </div>
+      <% end %>
+  <% end %>
+  <%= link_to 'Créer un nouveau menu', new_batch_menu_path, class:'btn btn-back'  %>
+  </div>
+</body>
