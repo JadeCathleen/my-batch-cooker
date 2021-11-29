@@ -28,7 +28,7 @@
       <ul>
         <% elements.each do |ingredient, details| %>
           <li style='list-style: none'>
-          <% if details[:unit_category] == 'pincée' %>
+          <% if details[:unit_category] == 'pincée' || details[:unit_category] == 'c. à soupe' || details[:unit_category] == 'c. à café'%>
             <p><strong><%= ingredient %></strong></p>
           <% elsif details[:unit_category] == 'pièce' %>
             <p><%= details[:quantity] %> <strong><%= ingredient%></strong></p>
