@@ -30,6 +30,7 @@ class BatchMenusController < ApplicationController
   def destroy
     @batch_menu = BatchMenu.find(params[:id])
     @batch_menu.destroy
+    redirect_to batch_menus_path
   end
 
   private

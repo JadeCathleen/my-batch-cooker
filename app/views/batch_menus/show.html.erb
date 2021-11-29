@@ -1,7 +1,7 @@
-<body class="bg-white">
+<body style="background-image: url('https://res.cloudinary.com/dodtdqhy0/image/upload/v1638185742/pexels-ray-piedra-1565982_cibgv1.jpg'); background-size: cover; background-position: center;">
 
 <div class="container d-flex flex-column justify-content-center align-items-center">
-<h5 class='mt-3' style='color:black;'><%= @batch_menu.name %></h2>
+<h5 class='mt-3' style='text-shadow: 0 0 15px black;'><%= @batch_menu.name %></h2>
 
 <div class="meal-time-wrapper">
   <% days = {
@@ -15,7 +15,7 @@
   } %>
     <% days.each do |k, v| %>
       <div>
-        <h6><%= k %></h6>
+        <h5 class="text-center" style='font-size: 150%; text-shadow: 0 0 15px black;'><%= k %></h5>
           <% meal_lunch = @meals.find_by(meal_time: "#{v}_lunch") %>
           <% if meal_lunch.nil? %>
             <div class='calendar-square empty'></div>
