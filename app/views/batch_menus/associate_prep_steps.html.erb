@@ -1,111 +1,35 @@
-<div class="container">
-  <h5 style='color:black;'><strong>Préparation de mon <%= @batch_menu.name %></strong></h5>
+<body class='bg-white'>
+  <div class="container">
     <div class="prep_steps">
-    <div class="card-step">
-      <div class="step" style="width: 20%;">Etape 1</div>
-      <% @batch_menu.prep_list.each do |action_verb, value| %>
-        <% if action_verb == 'pre_heat' %>
-          <div class="d-flex flex-column" style="width: 80%;">
-            <% value.each do |recipe, prep_step| %>
-            <ul>
-              <li style="list-style:none;"><p><strong><%= recipe %></strong></p>
-              <% prep_step %></li>
-            </ul>
+      <h5 style='color:black;'><strong>Préparation de mon <%= @batch_menu.name %></strong></h5>
+      <br/>
+
+
+      <% ['pre_heat', 'prepare', 'cut', 'mix', 'pre_cook', 'cook', 'serve'].each_with_index do |verb, index| %>
+        <div class="card-step">
+          <div class="step-number"><h5><%= index + 1 %></h5></div>
+          <% @batch_menu.prep_list.each do |action_verb, value| %>
+            <% if action_verb == verb %>
+              <div class="d-flex flex-column">
+                <% value.each do |recipe, prep_step| %>
+                <ul>
+                  <li style="list-style:none;"><p class='light-green'><strong><%= recipe %></strong></p>
+                  <p class='prep-description'><%= prep_step %></p></li>
+                </ul>
+                <% end %>
+              </div>
             <% end %>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="card-step">
-      <div class="step" style="width: 20%;">Etape 2</div>
-      <% @batch_menu.prep_list.each do |action_verb, value| %>
-        <% if action_verb == 'prepare' %>
-        <div class="d-flex flex-column" style="width: 80%;">
-          <% value.each do |recipe, prep_step| %>
-            <ul>
-              <li style="list-style:none;"><p><strong><%= recipe %></strong></p>
-              <%= prep_step %></li>
-            </ul>
-          <% end %>
-        </div>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="card-step">
-      <div class="step" style="width: 20%;">Etape 3</div>
-      <% @batch_menu.prep_list.each do |action_verb, value| %>
-        <% if action_verb == 'cut' %>
-          <div class="d-flex flex-column" style="width: 80%;">
-            <% value.each do |recipe, prep_step| %>
-              <ul>
-              <li style="list-style:none;"><p><strong><%= recipe %></strong></p>
-              <%= prep_step %></li>
-            </ul>
-          <% end %>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="card-step">
-      <div class="step" style="width: 20%;">Etape 4</div>
-      <% @batch_menu.prep_list.each do |action_verb, value| %>
-        <% if action_verb == 'mix' %>
-          <div class="d-flex flex-column" style="width: 80%;">
-            <% value.each do |recipe, prep_step| %>
-              <ul>
-              <li style="list-style:none;"><p><strong><%= recipe %></strong></p>
-              <%= prep_step %></li>
-            </ul>
             <% end %>
-          </div>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="card-step">
-      <div class="step" style="width: 20%;">Etape 5</div>
-      <% @batch_menu.prep_list.each do |action_verb, value| %>
-        <% if action_verb == 'pre_cook' %>
-        <div class="d-flex flex-column" style="width: 80%;">
-          <% value.each do |recipe, prep_step| %>
-            <ul>
-            <li style="list-style:none;"><p><strong><%= recipe %></strong></p>
-            <%= prep_step %></li>
-          </ul>
-          <% end %>
         </div>
+
+        <% if index < 6 %>
+          <div class="separator"></div>
         <% end %>
+
       <% end %>
-    </div>
-    <div class="card-step">
-      <div class="step" style="width: 20%;">Etape 6</div>
-      <% @batch_menu.prep_list.each do |action_verb, value| %>
-        <% if action_verb == 'cook' %>
-        <div class="d-flex flex-column" style="width: 80%;">
-          <% value.each do |recipe, prep_step| %>
-            <ul>
-            <li style="list-style:none;"><p><strong><%= recipe %></strong></p>
-            <%= prep_step %></li>
-          </ul>
-          <% end %>
-        </div>
-        <% end %>
-      <% end %>
-    </div>
-    <div class="card-step">
-      <div class="step" style="width: 20%;">Etape 7</div>
-      <% @batch_menu.prep_list.each do |action_verb, value| %>
-        <% if action_verb == 'serve' %>
-      <% raise %>
-        <div class="d-flex flex-column" style="width: 80%;">
-          <% value.each do |recipe, prep_step| %>
-            <ul>
-            <li style="list-style:none;"><p><strong><%= recipe %></strong></p>
-            <%= prep_step %></li>
-          </ul>
-          <% end %>
-        </div>
-        <% end %>
-      <% end %>
+
+    <%= link_to 'Retour', batch_menu_path(@batch_menu), class:'btn btn-back' %>
+
     </div>
   </div>
-</div>
+</body>
