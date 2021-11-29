@@ -1,11 +1,8 @@
-.batch-new-container {
-  margin: 20px;
-}
-
 .meal-time-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .meal-time-wrapper h6 {
@@ -30,29 +27,17 @@
     border-radius: 4px;
     color: black;
     /* border-color: #dbd5d5; */
-    background-color: lightgray;
+    background-color: white;
 }
 
 .calendar-input:checked + label {
   color: white !important;
-  background-color: #00a184 ;
+  background-color: #85BDA6 ;
 }
 
-.calendar-input:checked:hover {
-  background-color: rgb(173, 173, 173);
-}
-
-
-#new_batch_menu {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    .form-center {
-      width: 24%;
-      margin: 0;
-    }
-}
+// .calendar-input:checked:hover {
+//   background-color: rgb(173, 173, 173);
+// }
 
 .meal-time-wrapper {
   margin-bottom: 30px;
