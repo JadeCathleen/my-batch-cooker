@@ -1,6 +1,6 @@
 <div class="container">
   <h5 style='color:black;'><strong>Préparation de mon <%= @batch_menu.name %></strong></h5>
-  <div class="prep_steps">
+    <div class="prep_steps">
     <div class="card-step">
       <div class="step" style="width: 20%;">Etape 1</div>
       <% @batch_menu.prep_list.each do |action_verb, value| %>
@@ -9,7 +9,7 @@
             <% value.each do |recipe, prep_step| %>
             <ul>
               <li style="list-style:none;"><p><strong><%= recipe %></strong></p>
-              <%= prep_step %></li>
+              <% prep_step %></li>
             </ul>
             <% end %>
           </div>
@@ -95,6 +95,7 @@
       <div class="step" style="width: 20%;">Etape 7</div>
       <% @batch_menu.prep_list.each do |action_verb, value| %>
         <% if action_verb == 'serve' %>
+      <% raise %>
         <div class="d-flex flex-column" style="width: 80%;">
           <% value.each do |recipe, prep_step| %>
             <ul>
