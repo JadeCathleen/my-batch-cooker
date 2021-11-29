@@ -1,17 +1,14 @@
-.batch-new-container {
-  margin: 20px;
-}
-
 .meal-time-wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 50px;
 }
 
 .meal-time-wrapper h6 {
   text-align: center;
-  border: solid;
-  border-color: grey;
+  // border: solid;
+  // border-color: grey;
 }
 
 .form-check{
@@ -30,10 +27,31 @@
     border-radius: 4px;
     color: black;
     /* border-color: #dbd5d5; */
-    background-color: lightgray;
+    background-color: white;
 }
 
 .calendar-input:checked + label {
   color: white !important;
-  background-color: green ;
+  background-color: #85BDA6 ;
+}
+
+// .calendar-input:checked:hover {
+//   background-color: rgb(173, 173, 173);
+// }
+
+.meal-time-wrapper {
+  margin-bottom: 30px;
+
+  h6 {
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+  }
+
+  > div:not(:last-child) {
+    border-right: 1px solid grey;
+  }
+
+  fieldset:not(:last-child) {
+    border-bottom: 1px solid grey;
+  }
 }

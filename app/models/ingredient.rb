@@ -1,5 +1,5 @@
 class Ingredient < ApplicationRecord
-  has_many :ingredient_quantities
+  has_many :ingredient_quantities, dependent: :destroy
   enum category: {
     "boucherie" => 1,
     "poissonnerie" => 2,
@@ -10,7 +10,8 @@ class Ingredient < ApplicationRecord
     "liquides" => 7,
     "rayon frais" => 8,
     "boulangerie" => 9,
-    "herbes" => 10
+    "herbes" => 10,
+    "pâtes" => 11
   }
 
   enum unit_category: {
@@ -20,6 +21,6 @@ class Ingredient < ApplicationRecord
     "c. à café" => 4,
     "c. à soupe" => 5,
     "pincée" => 6,
-    "tranche" => 7
+    "tranches" => 7
   }
 end

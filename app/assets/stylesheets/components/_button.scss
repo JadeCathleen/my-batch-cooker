@@ -40,16 +40,29 @@
   background-color: black;
   color: white;
   width: 142px;
+  border-radius: 50px;
+  margin-top: 26px;
 }
 
 #go-button:hover {
-  color:black;
   background-color: white;
+  color:black;
 }
 
+.btn-back {
+  color: white;
+  padding: 8px 24px;
+  font-size: 17px;
+  border-radius: 4px;
+  background:#156064;
+  transition: background 0.3s ease;
+  border-radius: 50px;
+  font-weight: lighter;
+  font-family: "Galano Grotesque Regular",sans-serif;
+  text-decoration: none;
+}
 
-// .btn .btn-flat {
-//   background-color: white;
-//   margin-left: auto;
-//   margin-right: auto;
-// }
+.btn-back:hover {
+  background:#85BDA6;
+  color:white;
+}

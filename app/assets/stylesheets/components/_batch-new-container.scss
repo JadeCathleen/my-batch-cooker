@@ -1,0 +1,28 @@
+.batch-new-container {
+  background-image: url(kitchen-utensils-on-counter.jpg);
+  background-size: cover;
+  background-position: center;
+  margin: 0px;
+  height: 88vh;
+}
+
+.batch-new-container h4 {
+  color: white;
+}
+
+.batch-new-container h6 {
+  color: white;
+}
+
+#new_batch_menu {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    .form-center {
+      width: 21%;
+      margin: 0;
+      margin-top: 54px;
+      border-radius: 50px;
+    }
+}

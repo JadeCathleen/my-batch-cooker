@@ -1,5 +1,5 @@
 class BatchMenu < ApplicationRecord
-  has_many :recipes_lists
+  has_many :recipes_lists, dependent: :destroy
   has_many :recipes, through: :recipes_lists
   validates :name, length: { maximum: 60,
   too_long: "%{count} characters is the maximum allowed" }
@@ -7,31 +7,19 @@ class BatchMenu < ApplicationRecord
 
   def shopping_list
     list = {}
-    ingredient_name = {}
-    ingredient_details = {}
     recipes.each do |recipe|
       recipe.ingredient_quantities.each do |qty|
         if list[qty.ingredient.category]
           if list[qty.ingredient.category][qty.ingredient.name]
             list[qty.ingredient.category][qty.ingredient.name][:quantity] += ((qty.quantity).fdiv(4) * nb_of_people).ceil
           else
-            ingredient_details[:quantity] = ((qty.quantity).fdiv(4) * nb_of_people).ceil
-            ingredient_details[:unit_category] = qty.ingredient.unit_category
-            ingredient_name[qty.ingredient.name] = {
-              quantity: ingredient_details[:quantity],
-              unit_category: ingredient_details[:unit_category]
-            }
-            list[qty.ingredient.category][qty.ingredient.name] = ingredient_name[qty.ingredient.name]
+            set_ingredient_hash(qty)
+            list[qty.ingredient.category][qty.ingredient.name] = @ingredient_name[qty.ingredient.name]
           end
         else
-          ingredient_details[:quantity] = ((qty.quantity).fdiv(4) * nb_of_people).ceil
-          ingredient_details[:unit_category] = qty.ingredient.unit_category
-          ingredient_name[qty.ingredient.name] = {
-            quantity: ingredient_details[:quantity],
-            unit_category: ingredient_details[:unit_category]
-          }
+          set_ingredient_hash(qty)
           list[qty.ingredient.category] = {}
-          list[qty.ingredient.category][qty.ingredient.name] = ingredient_name[qty.ingredient.name]
+          list[qty.ingredient.category][qty.ingredient.name] = @ingredient_name[qty.ingredient.name]
         end
       end
     end
@@ -52,5 +40,22 @@ class BatchMenu < ApplicationRecord
       end
     end
     list
+  end
+
+  # def oven_temp
+
+  # end
+
+  private
+
+  def set_ingredient_hash(qty)
+    @ingredient_name = {}
+    ingredient_details = {}
+    ingredient_details[:quantity] = ((qty.quantity).fdiv(4) * nb_of_people).ceil
+    ingredient_details[:unit_category] = qty.ingredient.unit_category
+    @ingredient_name[qty.ingredient.name] = {
+      quantity: ingredient_details[:quantity],
+      unit_category: ingredient_details[:unit_category]
+    }
   end
 end

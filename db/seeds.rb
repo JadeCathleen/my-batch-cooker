@@ -16,6 +16,7 @@ if Rails.env.development?
   PreparationStep.destroy_all
   Recipe.destroy_all
   Ingredient.destroy_all
+  User.destroy_all
 end
 User.create!(email: 'test@test.com', password: 'qwerty')
 

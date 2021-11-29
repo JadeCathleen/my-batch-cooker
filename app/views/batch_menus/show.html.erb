@@ -17,6 +17,22 @@
   <% end %>
 </div>
 
-<%= link_to 'Cuisinez!', associate_prep_steps_batch_menu_path(@batch_menu) %>
 
-<%= render 'batch_menus/shopping_list', shopping_list: @batch_menu.shopping_list %>
+<button type="button" class="btn btn-home" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Courses
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color:black; text-align:center;">Mes courses</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= render 'batch_menus/shopping_list', shopping_list: @batch_menu.shopping_list %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%= link_to 'Cuisinez!', associate_prep_steps_batch_menu_path(@batch_menu), class:'btn btn-home' %>
