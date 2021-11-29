@@ -9,6 +9,7 @@ ul {
 
 .modal-content p {
   margin-bottom: 5px;
+  text-align: center;
 }
 
 .modal-content h3 {
@@ -16,6 +17,17 @@ ul {
 }
 
 .modal-body {
-  background-color: #f2f1f1;
   margin: 17px;
+}
+
+.shopping-list-modal {
+  .modal-dialog {
+    max-width: 80vw;
+  }
+  .shopping-list {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    flex-wrap: wrap;
+  }
 }

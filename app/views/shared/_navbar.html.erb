@@ -25,8 +25,8 @@
             <li class="nav-item dropdown">
               <span id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup=true aria-expanded=false><%= current_user.email %></span>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                <%= link_to "Une Action", "#", class: "dropdown-item" %>
-                <%= link_to "Une Autre Action", "#", class: "dropdown-item" %>
+                <%= link_to "Créer un nouveau menu", new_batch_menu_path, class: "dropdown-item" %>
+                <%= link_to "Mes menus", batch_menus_path, class: "dropdown-item" %>
                 <%= link_to "Déconnexion", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
               </div>
                  <%#= link_to "#{current_user.email}", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>

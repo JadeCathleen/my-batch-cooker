@@ -1,5 +1,6 @@
 <div class="shopping-list">
   <% shopping_list.each do |category, elements| %>
+    <div>
     <% if category == "boucherie" %>
       <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png" alt=""> <%= category.capitalize %></h3>
     <% elsif category == "boulangerie" %>
@@ -38,5 +39,6 @@
           </li>
         <% end %>
       </ul>
+    </div>
   <% end %>
 </div>
