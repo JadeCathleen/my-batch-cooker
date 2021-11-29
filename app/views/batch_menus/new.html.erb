@@ -1,14 +1,14 @@
   <div class="batch-new-container">
     <%= simple_form_for(@batch_menu) do |f| %>
       <div class="form-center">
-        <%= f.input :name, label: 'Donnez un nom à votre batch :' %>
+        <%= f.input :name, label: 'Donnez un nom à votre menu :' %>
         <%= f.input :nb_of_people, as: :range, label: 'Combien de personnes seront à votre table ?',
         input_html: { min:1, max:4, value: 1, oninput: "document.querySelector('#count').innerHTML = this.value;" }  %>
         <span id='count'>1</span>
       </div>
       <div>
         <div id="nb-of-meals">
-          <h4>Vous préparez un batch pour:</h4>
+          <h4>Vous préparez un menu pour :</h4>
         </div>
         <div class="meal-time-wrapper">
           <% days = {
