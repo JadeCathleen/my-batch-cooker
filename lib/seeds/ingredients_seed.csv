@@ -1,94 +1,94 @@
-name,category,unit_category,ingredient_code
-filet de sole,poissonnerie,pièce,1
-oeuf,crèmerie,pièce,2
-chapelure,épicerie,g,3
-farine,épicerie,g,4
-sucre,épicerie,g,5
-sel,épicerie,pincée,6
-poivre,épicerie,pincée,7
-huile,épicerie,c. à soupe,8
-citron,fruits,pièce,9
-filet de daurade,poissonnerie,pièce,10
-cube de légumes,épicerie,pièce,11
-ail semoule,épicerie,c. à café,12
-huile d'olive,épicerie,c. à soupe,13
-basilic,herbes,pincée,14
-aubergine,légumes,pièce,15
-tomate,légumes,pièce,16
-gousse d'ail,légumes,pièce,17
-boeuf hâché,boucherie,g,18
-oignon,légumes,pièce,19
-fromage râpé,crèmerie,g,20
-blanc de poulet,boucherie,pièce,21
-citron vert,fruits,pièce,22
-yaourt nature,crèmerie,pièce,23
-steak haché,boucherie,pièce,24
-cheddar,crèmerie,tranche,25
-ketchup,épicerie,c. à soupe,26
-mayonnaise,épicerie,c. à soupe,27
-salade verte,légumes,pièce,28
-buns,boulangerie,pièce,29
-carotte,légumes,pièce,30
-miel,épicerie,c. à soupe,31
-persil,herbes,pincée,32
-vinaigre de cidre,épicerie,c. à soupe,33
-thym,herbes,pincée,34
-saumon,poissonnerie,g,35
-pâte feulletée,rayon frais,pièce,36
-chèvre,crèmerie,g,37
-crème fraîche,crèmerie,cl,38
-aneth,herbes,pincée,39
-pâtes,épicerie,g,40
-lardons,boucherie,g,41
-champignons,légumes,g,42
-reblochon,crèmerie,pièce,43
-pommes de terre,légumes,g,44
-fromage frais allégé,crèmerie,g,45
-lait écrémé,rayon frais,cl,46
-parmesan râpé,crèmerie,g,47
-beurre,rayon frais,g,48
-curry,herbes,c. à café,49
-noix de muscade,épicerie,pincée,50
-avocat,fruits,pièce,51
-chou kale,légumes,pièce,52
-grenade,fruits,pièce,53
-pois chiches,légumes,g,54
-graines de sésame,épicerie,c. à soupe,55
-paprika doux,épicerie,c. à café,56
-cumin,épicerie,c. à café,57
-branches de céleri,légumes,pièce,58
-oignons nouveaux,légumes,pièce,59
-jus de citron,rayon frais,c. à soupe,60
-moutarde,épicerie,c. à café,61
-pulpe de tomate,épicerie,g,62
-potimarron,légumes,g,63
-romarin,herbes,pincée,64
-courgette,légumes,pièce,65
-pesto,épicerie,g,66
-parmesan râpé,crèmerie,g,67
-rôti de veau,boucherie,g,68
-poireau,légumes,pièce,69
-pâte brisée,rayon frais,pièce,70
-échine de porc,boucherie,g,71
-oignon rouge,légumes,pièce,72
-figue,fruits,pièce,73
-piment de cayenne en poudre,épicerie,pincée,74
-safran,épicerie,pincée,75
-vacherin fribourgeois,crèmerie,g,76
-vin blanc sec,liquides,cl,77
-maïzena,épicerie,g,78
-kirsch,liquides,cl,79
-chou-fleur,légumes,pièce,80
-curcuma,épicerie,c. à café,81
-semoule de maïs,épicerie,g,82
-chorizo,boucherie,pièce,83
-tomates séchées,épicerie,pièce,84
-Pilons de poulet,boucherie,pièce,85
-origan,épicerie,c. à soupe,86
-oignon séché,épicerie,c. à soupe,87
-galettes bretonnes,rayon frais,pièce,88
-ciboulette,herbes,g,89
-saumon fumé en tranches,poissonnerie,pièce,90
-mozarella en boule,crèmerie,pièce,91
-poulet,boucherie,pièce,92
-feuilles de laurier,herbes,pièce,93
+name,category,unit_category,ingredient_code,emoji_url,emoji
+filet(s) de sole,poissonnerie,pièce,1,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f41f.png,
+oeuf(s),crèmerie,pièce,2,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+chapelure,épicerie,g,3,,
+farine,épicerie,g,4,,
+sucre,épicerie,g,5,,
+sel,épicerie,pincée,6,,
+poivre,épicerie,pincée,7,,
+huile,épicerie,c. à soupe,8,,
+citron(s),fruits,pièce,9,,
+filet(s) de daurade,poissonnerie,pièce,10,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f41f.png,
+cube(s) de légumes,épicerie,pièce,11,,
+ail semoule,épicerie,c. à café,12,,
+huile d'olive,épicerie,c. à soupe,13,,
+basilic,herbes,pincée,14,,🌿
+aubergine(s),légumes,pièce,15,,
+tomate(s),légumes,pièce,16,,
+gousse(s) d'ail,légumes,pièce,17,,
+boeuf hâché,boucherie,g,18,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png,
+oignon(s),légumes,pièce,19,,
+fromage râpé,crèmerie,g,20,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+blanc(s) de poulet,boucherie,pièce,21,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png,
+citron(s) vert(s),fruits,pièce,22,,🍍
+yaourt(s) nature(s),crèmerie,pièce,23,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+steak(s) haché(s),boucherie,pièce,24,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png,
+cheddar,crèmerie,tranches,25,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+ketchup,épicerie,c. à soupe,26,,
+mayonnaise,épicerie,c. à soupe,27,,
+salade(s) verte(s),légumes,pièce,28,,
+buns,boulangerie,pièce,29,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f35e.png,
+carotte(s),légumes,pièce,30,,
+miel,épicerie,c. à soupe,31,,
+persil,herbes,pincée,32,,
+vinaigre de cidre,épicerie,c. à soupe,33,,
+thym,herbes,pincée,34,,
+saumon,poissonnerie,g,35,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f41f.png,
+pâte(s) feulletée(s),rayon frais,pièce,36,,
+chèvre,crèmerie,g,37,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+crème fraîche,crèmerie,cl,38,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+aneth,herbes,pincée,39,,
+pâtes,pâtes,g,40,,
+lardons,boucherie,g,41,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png,
+champignons,légumes,g,42,,
+reblochon(s),crèmerie,pièce,43,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+pommes de terre,légumes,g,44,,
+fromage frais allégé,crèmerie,g,45,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+lait écrémé,rayon frais,cl,46,,
+parmesan râpé,crèmerie,g,47,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+beurre,rayon frais,g,48,,
+curry,herbes,c. à café,49,,
+noix de muscade,épicerie,pincée,50,,
+avocat(s),fruits,pièce,51,,
+chou(x) kale,légumes,pièce,52,,
+grenade(s),fruits,pièce,53,,
+pois chiches,légumes,g,54,,
+graines de sésame,épicerie,c. à soupe,55,,
+paprika doux,épicerie,c. à café,56,,
+cumin,épicerie,c. à café,57,,
+branches de céleri,légumes,pièce,58,,
+oignons nouveaux,légumes,pièce,59,,
+jus de citron,rayon frais,c. à soupe,60,,
+moutarde,épicerie,c. à café,61,,
+pulpe de tomate,épicerie,g,62,,
+potimarron,légumes,g,63,,
+romarin,herbes,pincée,64,,
+courgette(s),légumes,pièce,65,,
+pesto,épicerie,g,66,,
+parmesan râpé,crèmerie,g,67,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+rôti de veau,boucherie,g,68,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png,
+poireau(s),légumes,pièce,69,,
+pâte(s) brisée(s),rayon frais,pièce,70,,
+échine de porc,boucherie,g,71,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png,
+oignon(s) rouge(s),légumes,pièce,72,,
+figue(s),fruits,pièce,73,,
+piment de cayenne en poudre,épicerie,pincée,74,,
+safran,épicerie,pincée,75,,
+vacherin fribourgeois,crèmerie,g,76,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+vin blanc sec,liquides,cl,77,,
+maïzena,épicerie,g,78,,
+kirsch,liquides,cl,79,,
+chou(x)-fleur,légumes,pièce,80,,
+curcuma,épicerie,c. à café,81,,
+semoule de maïs,épicerie,g,82,,
+chorizo(s),boucherie,pièce,83,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png,
+tomates séchées,épicerie,pièce,84,,
+Pilons de poulet,boucherie,pièce,85,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png,
+origan,épicerie,c. à soupe,86,,
+oignon séché,épicerie,c. à soupe,87,,
+galettes bretonnes,rayon frais,pièce,88,,
+ciboulette,herbes,g,89,,
+saumon fumé,poissonnerie,tranches,90,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f41f.png,
+mozarella(s) en boule,crèmerie,pièce,91,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f9c0.png,
+poulet(s),boucherie,pièce,92,https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png,
+feuilles de laurier,herbes,pièce,93,,
