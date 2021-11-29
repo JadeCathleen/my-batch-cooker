@@ -1,6 +1,6 @@
 class PreparationStep < ApplicationRecord
-  has_many :ingredient_quantities
-  has_many :ingredients, through: :ingredient_quantities
+  has_many :ingredient_quantities, dependent: :destroy
+  has_many :ingredients, through: :ingredient_quantities, dependent: :destroy
   belongs_to :recipe
   enum action_verb: {
     'pre_heat' => 1,
