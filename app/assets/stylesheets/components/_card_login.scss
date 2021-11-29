@@ -8,11 +8,12 @@
 }
 
 .card-login {
+  height: 650px;
     width: 500px;
-    border-radius: 25px;
-    background-color:white;
-    box-shadow: 0 0 5px rgb(230, 230, 230);
-    border: 1px solid rgb(230, 230, 230);
+    border-radius: 30px;
+    background-color: white;
+    box-shadow: 0 0 5px #e6e6e6;
+    border: 1px solid #e6e6e6;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,7 +21,8 @@
     padding: 10px;
     opacity: 95%;
   img {
-    width: 300px;
+    width: 230px;
+    margin: -35px;
   }
 }
 
