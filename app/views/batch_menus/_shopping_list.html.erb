@@ -1,29 +1,29 @@
 <div class="shopping-list">
   <% shopping_list.each do |category, elements| %>
-    <% if category == "Boucherie" %>
-      <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png" alt=""> <%= category %></h3>
-    <% elsif category == "Boulangerie" %>
-      <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f35e.png" alt=""> <%= category %></h3>
-    <% elsif category == "Crèmerie" %>
-      <h3 class='text-center'>🧀 <%= category %></h3>
-    <% elsif category == "Épicerie" %>
-      <h3 class='text-center'>🌶 <%= category %></h3>
-    <% elsif category == "Fruits" %>
-      <h3 class='text-center'>🍍 <%= category %></h3>
-    <% elsif category == "Herbes" %>
-      <h3 class='text-center'>🌿 <%= category %></h3>
-    <% elsif category == "Légumes" %>
-      <h3 class='text-center'>🥕 <%= category %></h3>
-    <% elsif category == "Liquides" %>
-      <h3 class='text-center'>🥛 <%= category %></h3>
-    <% elsif category == "Pâtes" %>
-      <h3 class='text-center'>🍝 <%= category %></h3>
-    <% elsif category == "Poissonnerie" %>
-      <h3 class='text-center'>🐟 <%= category %></h3>
-    <% elsif category == "Rayon frais" %>
-      <h3 class='text-center'>🥶 <%= category %></h3>
+    <% if category == "boucherie" %>
+      <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png" alt=""> <%= category.capitalize %></h3>
+    <% elsif category == "boulangerie" %>
+      <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f35e.png" alt=""> <%= category.capitalize %></h3>
+    <% elsif category == "crèmerie" %>
+      <h3 class='text-center'>🧀 <%= category.capitalize %></h3>
+    <% elsif category == "épicerie" %>
+      <h3 class='text-center'>🌶 <%= category.capitalize %></h3>
+    <% elsif category == "fruits" %>
+      <h3 class='text-center'>🍍 <%= category.capitalize %></h3>
+    <% elsif category == "herbes" %>
+      <h3 class='text-center'>🌿 <%= category.capitalize %></h3>
+    <% elsif category == "légumes" %>
+      <h3 class='text-center'>🥕 <%= category.capitalize %></h3>
+    <% elsif category == "liquides" %>
+      <h3 class='text-center'>🥛 <%= category.capitalize %></h3>
+    <% elsif category == "pâtes" %>
+      <h3 class='text-center'>🍝 <%= category.capitalize %></h3>
+    <% elsif category == "poissonnerie" %>
+      <h3 class='text-center'>🐟 <%= category.capitalize %></h3>
+    <% elsif category == "rayon frais" %>
+      <h3 class='text-center'>🥶 <%= category.capitalize %></h3>
     <% else %>
-      <h3 class='text-center'><%= category %></h3>
+      <h3 class='text-center'><%= category.capitalize %></h3>
     <% end %>
       <ul>
         <% elements.each do |ingredient, details| %>
