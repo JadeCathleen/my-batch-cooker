@@ -1,32 +1,35 @@
 
 .show-card {
     overflow: hidden;
-    width: 60vw;
-    min-height: 60vh;
-    max-height: 70vh;
-    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    // border-radius: 5px;
     background-color:white;
-    box-shadow: 0 0 5px rgb(230, 230, 230);
-    border: 1px solid rgb(230, 230, 230);
+    // box-shadow: 0 0 5px rgb(230, 230, 230);
+    // border: 1px solid rgb(230, 230, 230);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0;
     opacity: 95%;
-    margin: 0;
   img {
     width: 40vw;
-    height: 100%;
-    object-fit: center;
+    height: 70vh;
+    object-fit: cover;
+    border-radius: 30px;
   }
   .show-description {
-    height: 60vh;
+    height: 100%;
     margin: 30px 30px;
     padding: 0;
+    color: black;
+    justify-content: left;
     // font-size: ;
+    text-align: justify;
+    text-justify: inter-word;
   }
   .scroll {
-    max-height: 100px;
+    max-height: 200px;
     overflow-y: auto;
 }
 }

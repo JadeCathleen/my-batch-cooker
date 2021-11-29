@@ -1,0 +1,30 @@
+<div class="show-card">
+  <div class="recipe-img">
+    <% if recipe.photo.attached? %>
+      <%= cl_image_tag recipe.photo.key %>
+    <% end %>
+  </div>
+  <div class="show-description">
+    <h6 class=" description mb-4"><strong>
+      <%= recipe.description %>
+    </strong></h6>
+    <div class="recipe-time mb-4">
+      <h6><strong>Temps de préparation :</strong>
+      <%= "#{recipe.prep_time} minutes" %></h6>
+      <h6><strong>Temps de cuisson :</strong>
+      <%= "#{recipe.cook_time} minutes" %></h6>
+    </div>
+    <div class='prep-steps'>
+      <h6 class='mb-3'><strong>Etapes de préparation:</strong> </h6>
+      <div>
+        <ol class='scroll'>
+          <% recipe.preparation_steps.each do |step|%>
+            <li class='mb-1'>
+              <p style='text-align: justify; text-justify: inter-word;'><%= step.content %></p>
+            </li>
+          <% end %>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>

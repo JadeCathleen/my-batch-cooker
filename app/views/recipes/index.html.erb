@@ -29,17 +29,32 @@
           <% if recipe.photo.attached? %>
             <%= cl_image_tag recipe.photo.key %>
           <% end %>
-              <div class="description-name">
-                  <div class="promo-overlay">
-                    <p><%= link_to "#{recipe.name}", recipe_path(recipe) %></p>
-                  </div>
+          <span class="add-btn" data-action="click->recipe-selection#selectRecipe"
+          data-id="<%= recipe.id %>"
+          data-batch-id="<%= @batch_menu.id %>"
+          data-meal="<%= @nb_of_meals %>">
+            <i class="fas fa-plus-circle"></i>
+          </span>
+          <%# <button type="button" > %>
+            <div class="description-name" data-bs-toggle="modal" data-bs-target="#recipeModal<%= recipe.id %>">
+                <div class="promo-overlay">
+                  <p><%=recipe.name %></p>
+                </div>
+            </div>
+          <%# </button> %>
+          <div class="modal fade shopping-list-modal" id="recipeModal<%= recipe.id %>"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" style="color:black; text-align:center;"><%= recipe.name %></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <%= render 'show', recipe: recipe %>
+                </div>
               </div>
-                    <span class="add-btn" data-action="click->recipe-selection#selectRecipe"
-                    data-id="<%= recipe.id %>"
-                    data-batch-id="<%= @batch_menu.id %>"
-                    data-meal="<%= @nb_of_meals %>">
-                      <i class="fas fa-plus-circle"></i>
-                    </span>
+            </div>
+          </div>
       </div>
     <% end %>
   </div>
