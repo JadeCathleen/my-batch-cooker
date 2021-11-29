@@ -1,33 +1,46 @@
-<div class="container" data-controller="recipe-selection">
-  <div class="card lists-container mt-4">
-    <h4 class='text-center'>Mes recettes</h4>
-    <p><em>Choisissez <%= @nb_of_meals %> recettes</em></p>
-    <div class="card-recipes-list" data-recipe-selection-target = "content">
-      <% @recipes_lists.each do |association| %>
-        <p><%= association.recipe.name %>
-        <%= link_to recipes_list_path(association), method: :delete do %>
-          <i class="fas fa-times"></i>
+<div class="container" id="recipes-index" data-controller="recipe-selection">
+
+  <div class="card-list-wrapper">
+    <div class="card lists-container mt-4">
+      <h4 class='text-center'>Mes recettes</h4>
+
+      <p><% if @nb_of_meals_left > 1 %>
+        <em>Choisissez <span data-recipe-selection-target="counter"><%= @nb_of_meals_left %> recettes</span></em>
+      <% else %>
+        <em>Choisissez <span data-recipe-selection-target="counter"><%= @nb_of_meals_left %> recette</span></em>
+      <% end %></p>
+
+      <div class="card-recipes-list" data-recipe-selection-target = "content">
+        <% @recipes_lists.each do |association| %>
+          <p><%= association.recipe.name %>
+          <%= link_to recipes_list_path(association), method: :delete do %>
+            <i class="fas fa-times"></i>
+          <% end %>
+          </p>
         <% end %>
-        </p>
-      <% end %>
+      </div>
+      <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-back', style: 'color:white' %>
     </div>
-    <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-primary', style: 'color:white' %>
   </div>
 
   <div class="cards">
     <% @recipes.each do |recipe| %>
-      <div class="card-link card-link-infos" data-recipe-selection-target = "recipe">
+      <div class="card-link card-link-infos">
           <% if recipe.photo.attached? %>
             <%= cl_image_tag recipe.photo.key %>
           <% end %>
               <div class="description-name">
-                <p><%= link_to "#{recipe.name}", recipe_path(recipe) %></p>
-                <span class="add-btn" data-action="click->recipe-selection#selectRecipe"
-                data-id="<%= recipe.id %>"
-                data-batch-id="<%= @batch_menu.id %>">
-                <i class="fas fa-plus-circle"></i>
-                </span>
+                  <div class="promo-overlay">
+                    <p><%= link_to "#{recipe.name}", recipe_path(recipe) %></p>
+                  </div>
               </div>
+                    <span class="add-btn" data-action="click->recipe-selection#selectRecipe"
+                    data-id="<%= recipe.id %>"
+                    data-batch-id="<%= @batch_menu.id %>"
+                    data-meal="<%= @nb_of_meals %>">
+                      <i class="fas fa-plus-circle"></i>
+                    </span>
       </div>
     <% end %>
   </div>
+</div>

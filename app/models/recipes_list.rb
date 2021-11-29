@@ -12,4 +12,9 @@ class RecipesList < ApplicationRecord
   def calendar_column
     DAY_COLUMN[meal_time.split('_').first.to_sym]
   end
+
+  # def recipe_list_by_meal_time(v)
+  #   @recipe_list = RecipesList.find_by(meal_time: v)
+  # end
+
 end

@@ -1,0 +1,35 @@
+
+.modal-content {
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.modal-content p {
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.modal-content h3 {
+  margin: 10px 0px 15px 0px;
+}
+
+.modal-body {
+  margin: 17px;
+}
+
+.modal-header img{
+  height: 56px;
+  cursor: pointer;
+}
+
+.shopping-list-modal {
+  .modal-dialog {
+    max-width: 80vw;
+  }
+  .shopping-list {
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    flex-wrap: wrap;
+  }
+}
