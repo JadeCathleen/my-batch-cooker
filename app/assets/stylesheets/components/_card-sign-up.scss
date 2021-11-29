@@ -1,0 +1,37 @@
+#new_user .btn {
+    background: black;
+    color: white;
+    border: 2px solid black;
+    text-align: center;
+}
+
+#new_user .btn:hover {
+    color: #0E0000 !important;
+    background: white;
+    border: 2px solid black;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.card-sign-up {
+  height: 540px;
+  width: 500px;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0 0 5px #e6e6e6;
+  border: 1px solid #e6e6e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  opacity: 95%;
+img {
+    width: 150px;
+    margin: -0;
+    height: 150px;
+  }
+}
