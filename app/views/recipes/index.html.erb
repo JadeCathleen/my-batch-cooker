@@ -3,7 +3,13 @@
   <div class="card-list-wrapper">
     <div class="card lists-container mt-4">
       <h4 class='text-center'>Mes recettes</h4>
-      <p><em>Choisissez <%= @nb_of_meals %> recettes</em></p>
+
+      <p><% if @nb_of_meals_left > 1 %>
+        <em>Choisissez <span data-recipe-selection-target="counter"><%= @nb_of_meals_left %> recettes</span></em>
+      <% else %>
+        <em>Choisissez <span data-recipe-selection-target="counter"><%= @nb_of_meals_left %> recette</span></em>
+      <% end %></p>
+
       <div class="card-recipes-list" data-recipe-selection-target = "content">
         <% @recipes_lists.each do |association| %>
           <p><%= association.recipe.name %>
@@ -19,7 +25,7 @@
 
   <div class="cards">
     <% @recipes.each do |recipe| %>
-      <div class="card-link card-link-infos" data-recipe-selection-target = "recipe">
+      <div class="card-link card-link-infos">
           <% if recipe.photo.attached? %>
             <%= cl_image_tag recipe.photo.key %>
           <% end %>
@@ -30,7 +36,8 @@
               </div>
                     <span class="add-btn" data-action="click->recipe-selection#selectRecipe"
                     data-id="<%= recipe.id %>"
-                    data-batch-id="<%= @batch_menu.id %>">
+                    data-batch-id="<%= @batch_menu.id %>"
+                    data-meal="<%= @nb_of_meals %>">
                       <i class="fas fa-plus-circle"></i>
                     </span>
       </div>
