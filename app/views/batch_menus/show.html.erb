@@ -1,27 +1,42 @@
+<body class="bg-white">
 
+<div class="container d-flex flex-column justify-content-center align-items-center">
+<h5 class='mt-3' style='color:black;'><%= @batch_menu.name %></h2>
 
-<%= @batch_menu.name %>
-
-<div class="calendar">
-  <div style='grid-column: 1'>Lundi</div>
-  <div style='grid-column: 2'>Mardi</div>
-  <div style='grid-column: 3'>Mercredi</div>
-  <div style='grid-column: 4'>Jeudi</div>
-  <div style='grid-column: 5'>Vendredi</div>
-  <div style='grid-column: 6'>Samedi</div>
-  <div style='grid-column: 7'>Dimanche</div>
-  <% @meals.each do |meal| %>
-    <div class="day" style='grid-row:<%=meal.calendar_row%>; grid-column:<%=meal.calendar_column%>;'>
-      <%= cl_image_tag meal.recipe.photo.key, width:200 %>
-    </div>
-  <% end %>
+<div class="meal-time-wrapper">
+  <% days = {
+    lundi: "monday",
+    mardi: "tuesday",
+    mercredi: "wednesday",
+    jeudi: "thursday",
+    vendredi: "friday",
+    samedi: "saturday",
+    dimanche: "sunday"
+  } %>
+    <% days.each do |k, v| %>
+      <div>
+        <h6><%= k %></h6>
+          <% meal_lunch = @meals.find_by(meal_time: "#{v}_lunch") %>
+          <% if meal_lunch.nil? %>
+            <div class='calendar-square empty'></div>
+          <% else %>
+            <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_lunch.recipe.photo.key %>); background-size: cover;"></div>
+          <% end %>
+          <% meal_dinner = @meals.find_by(meal_time: "#{v}_dinner") %>
+          <% if meal_dinner.nil?%>
+            <div class='calendar-square empty'></div>
+          <% else %>
+            <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_dinner.recipe.photo.key %>); background-size: cover;"></div>
+          <% end %>
+      </div>
+    <% end %>
 </div>
 
-
+<div class="buttons mt-3">
 <button type="button" class="btn btn-home" data-bs-toggle="modal" data-bs-target="#exampleModal">
   Courses
 </button>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade shopping-list-modal" id="exampleModal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -36,3 +51,6 @@
 </div>
 
 <%= link_to 'Cuisinez!', associate_prep_steps_batch_menu_path(@batch_menu), class:'btn btn-home' %>
+</div>
+</div>
+</body>

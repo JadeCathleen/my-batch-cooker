@@ -1,34 +1,35 @@
 <div class="shopping-list">
   <% shopping_list.each do |category, elements| %>
+    <div>
     <% if category == "boucherie" %>
-      <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png" alt=""> <%= category %></h3>
+      <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png" alt=""> <%= category.capitalize %></h3>
     <% elsif category == "boulangerie" %>
-      <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f35e.png" alt=""> <%= category %></h3>
+      <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f35e.png" alt=""> <%= category.capitalize %></h3>
     <% elsif category == "crèmerie" %>
-      <h3 class='text-center'>🧀 <%= category %></h3>
+      <h3 class='text-center'>🧀 <%= category.capitalize %></h3>
     <% elsif category == "épicerie" %>
-      <h3 class='text-center'>🌶 <%= category %></h3>
+      <h3 class='text-center'>🌶 <%= category.capitalize %></h3>
     <% elsif category == "fruits" %>
-      <h3 class='text-center'>🍍 <%= category %></h3>
+      <h3 class='text-center'>🍍 <%= category.capitalize %></h3>
     <% elsif category == "herbes" %>
-      <h3 class='text-center'>🌿 <%= category %></h3>
+      <h3 class='text-center'>🌿 <%= category.capitalize %></h3>
     <% elsif category == "légumes" %>
-      <h3 class='text-center'>🥕 <%= category %></h3>
+      <h3 class='text-center'>🥕 <%= category.capitalize %></h3>
     <% elsif category == "liquides" %>
-      <h3 class='text-center'>🥛 <%= category %></h3>
+      <h3 class='text-center'>🥛 <%= category.capitalize %></h3>
     <% elsif category == "pâtes" %>
-      <h3 class='text-center'>🍝 <%= category %></h3>
+      <h3 class='text-center'>🍝 <%= category.capitalize %></h3>
     <% elsif category == "poissonnerie" %>
-      <h3 class='text-center'>🐟 <%= category %></h3>
+      <h3 class='text-center'>🐟 <%= category.capitalize %></h3>
     <% elsif category == "rayon frais" %>
-      <h3 class='text-center'>🥶 <%= category %></h3>
+      <h3 class='text-center'>🥶 <%= category.capitalize %></h3>
     <% else %>
-      <h3 class='text-center'><%= category %></h3>
+      <h3 class='text-center'><%= category.capitalize %></h3>
     <% end %>
       <ul>
         <% elements.each do |ingredient, details| %>
           <li style='list-style: none'>
-          <% if details[:unit_category] == 'pincée' %>
+          <% if details[:unit_category] == 'pincée' || details[:unit_category] == 'c. à soupe' || details[:unit_category] == 'c. à café'%>
             <p><strong><%= ingredient %></strong></p>
           <% elsif details[:unit_category] == 'pièce' %>
             <p><%= details[:quantity] %> <strong><%= ingredient%></strong></p>
@@ -38,5 +39,6 @@
           </li>
         <% end %>
       </ul>
+    </div>
   <% end %>
 </div>
