@@ -1,0 +1,5 @@
+meta_product_name: "MyBatchCooker"
+meta_title: "MyBatchCooker - Cuisinez pour la semaine"
+meta_description: "Choisissez vos plats et générez votre menu pour gagner le plus de temps possible en cuisine"
+meta_image: "photo-meta-fb-quali.jpg" # should exist in `app/assets/images/`
+twitter_account: "@JadeCathleen22"   # required for Twitter Cards
