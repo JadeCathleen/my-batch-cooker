@@ -1,3 +1,7 @@
+#search_query {
+  border-radius: 30px;
+}
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -157,10 +161,11 @@
 
 .lists-container {
   position: sticky;
-  border-radius:10px;
+  border-radius: 30px;
   top: 100px;
   // z-index: 80;
   margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
   margin-right: 1.3rem;
   width:20vw;
   .card-recipes-list {
