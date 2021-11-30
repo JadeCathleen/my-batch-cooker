@@ -5,6 +5,10 @@ h3 {
   font-size: 40px;
 }
 
+.real-container {
+  margin: 20px auto;
+}
+
 .prep_steps {
   display: flex;
   justify-content: center;
@@ -58,7 +62,7 @@ h3 {
 }
 
 .card-step li {
-  font-size: 26px;
+  font-size: 20px;
   line-height: 1.4;
   opacity: .7;
   margin-bottom: 0;

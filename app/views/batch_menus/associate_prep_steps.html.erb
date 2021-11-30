@@ -1,38 +1,23 @@
 <body class='bg-white' style=" background-image: url(https://res.cloudinary.com/dodtdqhy0/image/upload/v1638185742/pexels-ray-piedra-1565982_cibgv1.jpg); background-size: cover;">
-  <div class="container d-flex flex-column justify-content-center align-items-center">
-    <div class="prep_steps">
-      <h3 style='color:white;'>Préparation de mon <%= @batch_menu.name %></h3>
-      <br/>
+  <div class="real-container">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+      <div class="prep_steps">
+        <h3 style='color:white;'>Préparation de mon <%= @batch_menu.name %></h3>
+        <br/>
 
-    <div id="carouselExampleIndicators" class="carousel" data-bs-ride="carousel"  data-bs-interval="false">
-     <%#  <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-      </div> %>
-      <div class="carousel-inner">
+      <div id="carouselExampleIndicators" class="carousel" data-bs-ride="carousel"  data-bs-interval="false">
+      <%#  <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div> %>
+        <div class="carousel-inner">
 
-        <div class="carousel-item active">
-          <div class="card-step">
-            <div class="step-number"><h5>1</h5></div>
-            <% @batch_menu.prep_list.each do |action_verb, value| %>
-              <% if action_verb == "pre_heat" %>
-                <ul>
-                  <% value.each do |recipe, prep_step| %>
-                      <li style="list-style:none;"><p class='light-green'><strong><%= recipe %></strong></p>
-                      <p class='prep-description'><%= prep_step %></p></li>
-                  <% end %>
-                </ul>
-              <% end %>
-            <% end %>
-          </div>
-        </div>
-        <% ['prepare', 'cut', 'mix', 'pre_cook', 'cook', 'serve'].each_with_index do |verb, index| %>
-          <div class="carousel-item">
+          <div class="carousel-item active">
             <div class="card-step">
-              <div class="step-number"><h5><%= index + 2 %></h5></div>
+              <div class="step-number"><h5>1</h5></div>
               <% @batch_menu.prep_list.each do |action_verb, value| %>
-                <% if action_verb == verb %>
+                <% if action_verb == "pre_heat" %>
                   <ul>
                     <% value.each do |recipe, prep_step| %>
                         <li style="list-style:none;"><p class='light-green'><strong><%= recipe %></strong></p>
@@ -43,23 +28,40 @@
               <% end %>
             </div>
           </div>
-        <% end %>
+          <% ['prepare', 'cut', 'mix', 'pre_cook', 'cook', 'serve'].each_with_index do |verb, index| %>
+            <div class="carousel-item">
+              <div class="card-step">
+                <div class="step-number"><h5><%= index + 2 %></h5></div>
+                <% @batch_menu.prep_list.each do |action_verb, value| %>
+                  <% if action_verb == verb %>
+                    <ul>
+                      <% value.each do |recipe, prep_step| %>
+                          <li style="list-style:none;"><p class='light-green'><strong><%= recipe %></strong></p>
+                          <p class='prep-description'><%= prep_step %></p></li>
+                      <% end %>
+                    </ul>
+                  <% end %>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
+        </div>
       </div>
-    </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually"><i class="fas fa-chevron-left"></i></span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually"><i class="fas fa-chevron-right"></i></span>
-      </button>
-    </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually"><i class="fas fa-chevron-left"></i></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually"><i class="fas fa-chevron-right"></i></span>
+        </button>
+      </div>
 
-    <div class="commands">
-        <%= link_to 'Retour', batch_menu_path(@batch_menu), class:'btn btn-back' %>
-    </div>
+      <div class="commands">
+          <%= link_to 'Retour', batch_menu_path(@batch_menu), class:'btn btn-back' %>
+      </div>
 
+      </div>
     </div>
   </div>
 </body>
