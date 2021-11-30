@@ -9,10 +9,8 @@
       <%= recipe.description %>
     </strong></h6>
     <div class="recipe-time mb-4">
-      <h6><strong>Temps de préparation :</strong>
-      <%= "#{recipe.prep_time} minutes" %></h6>
-      <h6><strong>Temps de cuisson :</strong>
-      <%= "#{recipe.cook_time} minutes" %></h6>
+      <h6 class='text-center'><strong><i class="far fa-clock"></i>  </strong>
+      <%= "#{recipe.prep_time + recipe.cook_time} minutes" %></h6>
     </div>
     <div class='prep-steps'>
       <h6 class='mb-3'><strong>Etapes de préparation:</strong> </h6>

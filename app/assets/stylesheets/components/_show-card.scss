@@ -33,3 +33,15 @@
     overflow-y: auto;
 }
 }
+
+.show-modal {
+  .modal-dialog {
+    max-width: 80vw;
+  }
+  // .shopping-list {
+  //   display: flex;
+  //   flex-direction: column;
+  //   height: 60vh;
+  //   flex-wrap: wrap;
+  // }
+}
