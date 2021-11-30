@@ -12,7 +12,6 @@
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div> %>
         <div class="carousel-inner">
-
           <div class="carousel-item active">
             <div class="card-step">
               <div class="step-number"><h5>1</h5></div>
@@ -20,7 +19,7 @@
                 <% if action_verb == "pre_heat" %>
                   <ul>
                     <% value.each do |recipe, prep_step| %>
-                        <li style="list-style:none;"><p class='light-green'><strong><%= recipe %></strong></p>
+                        <li style="list-style:none;"><p class='light-green' style="margin-bottom: 5px;"><strong><%= recipe %></strong></p>
                         <p class='prep-description'><%= prep_step %></p></li>
                     <% end %>
                   </ul>
@@ -36,7 +35,7 @@
                   <% if action_verb == verb %>
                     <ul>
                       <% value.each do |recipe, prep_step| %>
-                          <li style="list-style:none;"><p class='light-green'><strong><%= recipe %></strong></p>
+                          <li style="list-style:none;"><p class='light-green'style="margin-bottom: 5px;"><strong><%= recipe %></strong></p>
                           <p class='prep-description'><%= prep_step %></p></li>
                       <% end %>
                     </ul>
