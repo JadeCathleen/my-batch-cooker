@@ -2,8 +2,15 @@
 
   <div class="container d-flex flex-column justify-content-center align-items-center">
   <h5 class='mt-3' style='text-shadow: 0 0 15px black;'><%= @batch_menu.name %></h2>
-
+  <div class="">
+    <div class="relative">
+      <div class="btn-wrapper abs-btn">
+        <%= link_to 'Retour', recipes_path, class:'btn btn-back' %>
+      </div>
+    </div>
     <div class="meal-time-wrapper">
+      <div class="relative">
+      </div>
       <% days = {
         lundi: "monday",
         mardi: "tuesday",
@@ -31,7 +38,8 @@
           </div>
         <% end %>
     </div>
-    <div class="buttons mt-3">
+  </div>
+    <div class="buttons mb-3">
     <button type="button" class="btn btn-home" data-bs-toggle="modal" data-bs-target="#exampleModal">
       Courses
     </button>
