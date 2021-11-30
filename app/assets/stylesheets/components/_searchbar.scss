@@ -8,40 +8,7 @@
   bottom: 8px;
   right: 8px;
   color: white;
-  // padding: 14px 36px;
   font-size: 18px;
-  // border-radius: 4px;
-  background:#156064;
-  transition: background 0.3s ease;
-  border-radius: 50px;
-  // font-weight: lighter;
-  font-family: "Galano Grotesque Regular",sans-serif;
-  text-decoration: none;
-  text-align: center;
-  justify-content: center;
-  z-index: 0;
-  overflow: hidden;
-  // border-width: 2px;
-  // margin-left: 10px;
-  &:after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    background: #85BDA6;
-    transition: all 0.3s ease;
-    border: #85BDA6;
-  }
-  &:hover {
-    border: 1px solid #85BDA6;
-    &:after {
-      left: 0;
-      width: 100%;
-    }
-  }
 }
 
 .search-form-control .form-control {

@@ -50,8 +50,8 @@
 
 .btn-transparent:hover {
   opacity: 1;
-  background: black;
-  color: white;
+  background: white;
+  color: black;
 }
 
 #go-button{
@@ -70,9 +70,9 @@
 .btn-back {
   color: white;
   padding: 8px 24px;
-  font-size: 21px;
+  font-size: 15px;
   border-radius: 4px;
-  background:#156064;
+  background:  black;
   transition: background 0.3s ease;
   border-radius: 50px;
   font-weight: lighter;
@@ -81,7 +81,7 @@
 }
 
 .btn-back:hover {
-  background:#85BDA6;
+  background: #156064;
   color:white;
 }
 .btn-back-to-list {
