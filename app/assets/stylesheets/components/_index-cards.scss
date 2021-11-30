@@ -73,6 +73,7 @@
       // height: 100%;
       margin: 0;
       background-color: rgba(19, 19, 19, 0.6);
+      cursor: pointer;
       // display: flex;
       // align-items: center;
       // justify-content: center;
@@ -127,7 +128,7 @@
 }
 
 #recipes-index {
-display:flex;
+  display:flex;
 }
 
 .card img {
