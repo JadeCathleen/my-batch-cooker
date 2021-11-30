@@ -1,59 +1,72 @@
 <body style="background-image: url('https://res.cloudinary.com/dodtdqhy0/image/upload/v1638185742/pexels-ray-piedra-1565982_cibgv1.jpg'); background-size: cover; background-position: center;">
 
-<div class="container d-flex flex-column justify-content-center align-items-center">
-<h5 class='mt-3' style='text-shadow: 0 0 15px black;'><%= @batch_menu.name %></h2>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+  <h5 class='mt-3' style='text-shadow: 0 0 15px black;'><%= @batch_menu.name %></h2>
 
-<div class="meal-time-wrapper">
-  <% days = {
-    lundi: "monday",
-    mardi: "tuesday",
-    mercredi: "wednesday",
-    jeudi: "thursday",
-    vendredi: "friday",
-    samedi: "saturday",
-    dimanche: "sunday"
-  } %>
-    <% days.each do |k, v| %>
-      <div>
-        <h5 class="text-center" style='font-size: 150%; text-shadow: 0 0 15px black;'><%= k %></h5>
-          <% meal_lunch = @meals.find_by(meal_time: "#{v}_lunch") %>
-          <% if meal_lunch.nil? %>
-            <div class='calendar-square empty'></div>
-          <% else %>
-            <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_lunch.recipe.photo.key %>); background-size: cover;"></div>
-          <% end %>
-          <% meal_dinner = @meals.find_by(meal_time: "#{v}_dinner") %>
-          <% if meal_dinner.nil?%>
-            <div class='calendar-square empty'></div>
-          <% else %>
-            <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_dinner.recipe.photo.key %>); background-size: cover;"></div>
-          <% end %>
-      </div>
-    <% end %>
-</div>
-
-<div class="buttons mt-3">
-<button type="button" class="btn btn-home" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Courses
-</button>
-<div class="modal fade shopping-list-modal" id="exampleModal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" style="color:black; text-align:center;">Mes courses</h5>
-        <% link_to %>
-        <img src="https://res.cloudinary.com/dbogiehad/image/upload/v1638186669/recipes/download_fbkvcc.png" alt="">
+    <div class="meal-time-wrapper">
+      <% days = {
+        lundi: "monday",
+        mardi: "tuesday",
+        mercredi: "wednesday",
+        jeudi: "thursday",
+        vendredi: "friday",
+        samedi: "saturday",
+        dimanche: "sunday"
+      } %>
+        <% days.each do |k, v| %>
+          <div>
+            <h5 class="text-center" style='font-size: 150%; text-shadow: 0 0 15px black;'><%= k %></h5>
+              <% meal_lunch = @meals.find_by(meal_time: "#{v}_lunch") %>
+              <% if meal_lunch.nil? %>
+                <div class='calendar-square empty'></div>
+              <% else %>
+                <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_lunch.recipe.photo.key %>); background-size: cover;"></div>
+              <% end %>
+              <% meal_dinner = @meals.find_by(meal_time: "#{v}_dinner") %>
+              <% if meal_dinner.nil?%>
+                <div class='calendar-square empty'></div>
+              <% else %>
+                <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_dinner.recipe.photo.key %>); background-size: cover;"></div>
+              <% end %>
+          </div>
         <% end %>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="buttons mt-3">
+    <button type="button" class="btn btn-home" data-bs-toggle="modal" data-bs-target="#exampleModal">
+      Courses
+    </button>
+      <div class="modal fade shopping-list-modal" id="exampleModal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" style="color:black; text-align:center;">Mes courses</h5>
+              <img src="https://res.cloudinary.com/dbogiehad/image/upload/v1638186669/recipes/download_fbkvcc.png" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <%= render 'batch_menus/shopping_list', shopping_list: @batch_menu.shopping_list %>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="modal-body">
-        <%= render 'batch_menus/shopping_list', shopping_list: @batch_menu.shopping_list %>
+      <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <img src="https://res.cloudinary.com/dbogiehad/image/upload/v1638272422/recipes/smartphone_vl4yqg.png" alt="">
+              Votre liste de courses a été envoyée.
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-back-to-list" data-bs-target="#exampleModalToggle" data-bs-toggle="modal" data-bs-dismiss="modal">Retour à votre liste de courses</button>
+            </div>
+          </div>
+        </div>
       </div>
+    <%= link_to 'Cuisinez!', associate_prep_steps_batch_menu_path(@batch_menu), class:'btn btn-home' %>
     </div>
   </div>
-</div>
-
-<%= link_to 'Cuisinez!', associate_prep_steps_batch_menu_path(@batch_menu), class:'btn btn-home' %>
-</div>
-</div>
 </body>
