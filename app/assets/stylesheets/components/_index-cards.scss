@@ -1,8 +1,13 @@
 .cards {
   display: flex;
-  flex-wrap: wrap;
-  margin: 10px 3vw;
+  flex-direction: column;
   // z-index:1;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 1vw;
 }
 
 .card-link {
@@ -176,4 +181,13 @@
 
 .fa-times {
   color:#156064;
+}
+
+.btn-filter{
+  text-decoration: none;
+  color: black;
+}
+
+.btn-filter:hover {
+  color: grey;
 }
