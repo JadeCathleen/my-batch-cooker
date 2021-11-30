@@ -42,6 +42,7 @@
 
 <div class="results d-flex justify-content-between mt-2" >
     <% if @filtered %>
+      <p> Nous avons trouvé <%= @recipes.size %> résultat(s)</p>
       <p><%= link_to "Supprimez le filtre X", recipes_path , class: "btn-filter" %></p>
     <% end %>
 </div>
