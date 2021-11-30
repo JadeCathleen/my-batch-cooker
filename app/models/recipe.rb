@@ -1,4 +1,6 @@
 class Recipe < ApplicationRecord
+  include PgSearch::Model
+  pg_search_scope :global_search, against: [:name], using: { tsearch: { prefix: true } }
   has_many :preparation_steps, dependent: :destroy
   has_many :recipes_lists, dependent: :destroy
   has_many :ingredient_quantities, through: :preparation_steps, dependent: :destroy
