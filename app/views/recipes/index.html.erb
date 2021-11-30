@@ -39,16 +39,15 @@
         </button>
       </div>
     <% end %>
-
-<div class="results d-flex justify-content-between mt-2" >
-    <% if @filtered %>
-      <p> Nous avons trouvé <%= @recipes.size %> résultat(s)</p>
-      <p><%= link_to "Supprimez le filtre X", recipes_path , class: "btn-filter" %></p>
-    <% end %>
-</div>
+    <div class="results d-flex justify-content-between mt-2" >
+        <% if @filtered %>
+          <p> Nous avons trouvé <%= @recipes.size %> résultat(s)</p>
+          <p><%= link_to "Supprimez le filtre X", recipes_path , class: "btn-filter" %></p>
+        <% end %>
+    </div>
     <div class="wrap">
-    <% @recipes.each do |recipe| %>
-      <div class="card-link card-link-infos">
+      <% @recipes.each do |recipe| %>
+        <div class="card-link card-link-infos">
 
           <% if recipe.photo.attached? %>
             <%= cl_image_tag recipe.photo.key %>
@@ -59,13 +58,13 @@
           data-meal="<%= @nb_of_meals %>">
             <i class="fas fa-plus-circle"></i>
           </span>
-          <%# <button type="button" > %>
-            <div class="description-name" data-bs-toggle="modal" data-bs-target="#recipeModal<%= recipe.id %>">
-                <div class="promo-overlay">
-                  <p><%=recipe.name %></p>
-                </div>
-            </div>
-          <%# </button> %>
+            <%# <button type="button" > %>
+          <div class="description-name" data-bs-toggle="modal" data-bs-target="#recipeModal<%= recipe.id %>">
+              <div class="promo-overlay">
+                <p><%=recipe.name %></p>
+              </div>
+          </div>
+            <%# </button> %>
           <div class="modal fade show-modal" id="recipeModal<%= recipe.id %>"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
               <div class="modal-content">
@@ -79,8 +78,8 @@
               </div>
             </div>
           </div>
-      </div>
-    <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
