@@ -1,16 +1,15 @@
 .search-form-control {
   position: relative;
+  border-radius: 75px;
 }
 
 .search-form-control .btn {
   position: absolute;
   top: 8px;
   bottom: 8px;
-  right: 8px;
+  left: 715px;
   color: white;
-  // padding: 14px 36px;
   font-size: 18px;
-  // border-radius: 4px;
   background:#156064;
   transition: background 0.3s ease;
   border-radius: 50px;
@@ -21,8 +20,6 @@
   justify-content: center;
   z-index: 0;
   overflow: hidden;
-  // border-width: 2px;
-  // margin-left: 10px;
   &:after {
     position: absolute;
     content: "";
