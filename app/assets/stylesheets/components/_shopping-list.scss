@@ -11,10 +11,6 @@
 }
 
 
-.modal-header img{
-  height: 40px;
-  cursor: pointer;
-}
 
 .shopping-list-modal {
   .modal-content {
@@ -26,6 +22,15 @@
   .modal-content h3 {
     margin: 10px 0px 15px 0px;
     font-size: 34px;
+  }
+  .modal-header img{
+    height: 40px;
+    cursor: pointer;
+  }
+  .modal-header img:hover {
+    color: #000;
+    text-decoration: none;
+    opacity: 0.75;
   }
   .modal-header .btn-close {
     margin: -0.5rem -0.5rem -0.5rem -130px;
