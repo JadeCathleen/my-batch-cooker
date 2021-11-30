@@ -17,11 +17,33 @@
               <div class="step-number"><h5>1</h5></div>
               <% @batch_menu.prep_list.each do |action_verb, value| %>
                 <% if action_verb == "pre_heat" %>
+                <% prep_heat_ordered = value.to_a.sort_by { |dish| dish.last.match(/\d+/)[0].to_i } %>
                   <ul>
-                    <% value.each do |recipe, prep_step| %>
-                        <li style="list-style:none;"><p class='light-green' style="margin-bottom: 5px;"><strong><%= recipe %></strong></p>
-                        <p class='prep-description'><%= prep_step %></p></li>
-                    <% end %>
+
+                        <li style="list-style:none;"><p class='light-green' style="margin-bottom: 5px;"><strong><%= prep_heat_ordered.first[1] %></strong></p>
+                        <% oven_temp = prep_heat_ordered.first[1].match(/\d+/)[0].to_i %>
+                        <% lowest_temp = [] %>
+                        <% max_temp = [] %>
+                        <% prep_heat_ordered.each do |step| %>
+                          <% if step[1].match(/\d+/)[0].to_i == oven_temp %>
+                            <% lowest_temp << step[0] %>
+                          <% else %>
+                            <% max_temp << step[0] %>
+                          <% end %>
+                        <% end %>
+                          <% if lowest_temp.count > 1 %>
+                            <p class='prep-description'>Quand vous enfournerez <strong><%= lowest_temp.join(', ') %></strong>, placez les plats en bas du four.</p></li>
+                          <% elsif lowest_temp.count == 1 %>
+                            <p class='prep-description'>Quand vous enfournerez <strong><%= lowest_temp[0] %></strong>, placez le plat en bas du four.</p></li>
+                          <% else %>
+                          <% end %>
+                          <% if max_temp.count > 1 %>
+                            <p class='prep-description mt-2'>Quand vous enfournerez <strong><%= max_temp.join(', ') %></strong>, placez les plats en haut du four.</p></li>
+                          <% elsif max_temp.count == 1 %>
+                            <p class='prep-description mt-2'>Quand vous enfournerez <strong><%= max_temp[0] %></strong>, placez le plat en haut du four.</p></li>
+                          <% else %>
+                          <% end %>
+
                   </ul>
                 <% end %>
               <% end %>

@@ -42,10 +42,6 @@ class BatchMenu < ApplicationRecord
     list
   end
 
-  # def oven_temp
-
-  # end
-
   private
 
   def set_ingredient_hash(qty)
