@@ -3,23 +3,30 @@
   <div class="card-list-wrapper">
     <div class="card lists-container mt-4">
       <h4 class='text-center'>Mes recettes</h4>
-
-      <p><% if @nb_of_meals_left > 1 %>
+      <hr/>
+      <p data-recipe-selection-target="recipeNumber"><% if @nb_of_meals_left > 1 %>
         <em>Choisissez <span data-recipe-selection-target="counter"><%= @nb_of_meals_left %> recettes</span></em>
-      <% else %>
+      <% elsif @nb_of_meals_left == 1 %>
         <em>Choisissez <span data-recipe-selection-target="counter"><%= @nb_of_meals_left %> recette</span></em>
+      <% else %>
+        <em>Vous avez choisi toutes vos recettes ! 🎉</em>
       <% end %></p>
 
       <div class="card-recipes-list" data-recipe-selection-target = "content">
         <% @recipes_lists.each do |association| %>
-          <p><%= association.recipe.name %>
+        <div class="chosen-recipe">
+          <p><%= association.recipe.name %></p>
           <%= link_to recipes_list_path(association), method: :delete do %>
             <i class="fas fa-times"></i>
           <% end %>
-          </p>
+        </div>
         <% end %>
       </div>
-      <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-back', style: 'color:white' %>
+      <% if @nb_of_meals_left > 0 %>
+        <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-back disabled', style: 'color:white' %>
+      <% else %>
+        <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-back', style: 'color:white' %>
+      <% end %>
     </div>
   </div>
 
