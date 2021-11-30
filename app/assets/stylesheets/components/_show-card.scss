@@ -12,9 +12,9 @@
     align-items: center;
     padding: 0;
     opacity: 95%;
-  img {
-    width: 40vw;
-    height: 70vh;
+  .recipe-img > img {
+    width: 35vw;
+    height: 50vh!important;
     object-fit: cover;
     border-radius: 30px;
   }
@@ -27,6 +27,7 @@
     // font-size: ;
     text-align: justify;
     text-justify: inter-word;
+    text-shadow: none;
   }
   .scroll {
     max-height: 200px;
@@ -35,8 +36,16 @@
 }
 
 .show-modal {
+  // margin: auto;
+  .modal-content {
+    border-radius: 30px;
+    max-width: 70vw;
+    margin: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
   .modal-dialog {
-    max-width: 80vw;
+    max-width: 100vw;
   }
   // .shopping-list {
   //   display: flex;
