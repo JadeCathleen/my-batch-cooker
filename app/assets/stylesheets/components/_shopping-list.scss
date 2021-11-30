@@ -1,27 +1,15 @@
 
-.modal-content {
-  border-radius: 30px;
-  padding: 20px;
-  width: 500px;
-  margin:auto;
-}
 
 .modal-content p {
   margin-bottom: 5px;
   text-align: center;
 }
 
-.modal-content h3 {
-  margin: 10px 0px 15px 0px;
-}
 
 .modal-body {
   margin: 17px;
 }
 
-.modal-header .btn-close {
-  margin: -0.5rem -0.5rem -0.5rem -130px;
-}
 
 .modal-header img{
   height: 40px;
@@ -29,6 +17,19 @@
 }
 
 .shopping-list-modal {
+  .modal-content {
+    border-radius: 30px;
+    padding: 20px;
+    width: 467px;
+    margin:auto;
+  }
+  .modal-content h3 {
+    margin: 10px 0px 15px 0px;
+    font-size: 34px;
+  }
+  .modal-header .btn-close {
+    margin: -0.5rem -0.5rem -0.5rem -130px;
+  }
   .modal-dialog {
     max-width: 80vw;
   }
