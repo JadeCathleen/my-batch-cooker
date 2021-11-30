@@ -84,3 +84,24 @@
   background:#85BDA6;
   color:white;
 }
+.btn-back-to-list {
+  color: white;
+  padding: 8px 24px;
+  font-size: 15px;
+  border-radius: 4px;
+  background:#156064;
+  transition: background 0.3s ease;
+  border-radius: 50px;
+  font-weight: lighter;
+  font-family: "Galano Grotesque Regular",sans-serif;
+  text-decoration: none;
+}
+
+.btn-back-to-list:hover {
+  background:#85BDA6;
+  color:white;
+}
+
+.modal-footer {
+  justify-content: center;
+}
