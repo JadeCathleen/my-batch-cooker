@@ -1,31 +1,56 @@
 <div class="container" id="recipes-index" data-controller="recipe-selection">
-
   <div class="card-list-wrapper">
     <div class="card lists-container mt-4">
       <h4 class='text-center'>Mes recettes</h4>
-
-      <p><% if @nb_of_meals_left > 1 %>
-        <em>Choisissez <span data-recipe-selection-target="counter"><%= @nb_of_meals_left %> recettes</span></em>
-      <% else %>
-        <em>Choisissez <span data-recipe-selection-target="counter"><%= @nb_of_meals_left %> recette</span></em>
-      <% end %></p>
+      <hr/>
+      <p data-recipe-selection-target="recipeNumber">
+        <% if @nb_of_meals_left > 1 %>
+          <em>Choisissez <span data-recipe-selection-target="counter"><%= @nb_of_meals_left %> recettes</span></em>
+        <% elsif @nb_of_meals_left == 1 %>
+          <em>Choisissez <span data-recipe-selection-target="counter"><%= @nb_of_meals_left %> recette</span></em>
+        <% else %>
+          <em>Vous avez choisi toutes vos recettes ! 🎉</em>
+        <% end %>
+      </p>
 
       <div class="card-recipes-list" data-recipe-selection-target = "content">
         <% @recipes_lists.each do |association| %>
-          <p><%= association.recipe.name %>
+        <div class="chosen-recipe">
+          <p><%= association.recipe.name %></p>
           <%= link_to recipes_list_path(association), method: :delete do %>
             <i class="fas fa-times"></i>
           <% end %>
-          </p>
+        </div>
         <% end %>
       </div>
-      <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-back', style: 'color:white' %>
+      <% if @nb_of_meals_left > 0 %>
+        <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-back disabled', style: 'color:white' %>
+      <% else %>
+        <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-back', style: 'color:white' %>
+      <% end %>
     </div>
   </div>
-
   <div class="cards">
+
+ <%= simple_form_for :search, url: recipes_path, method: :get do |f| %>
+      <div class="search-form-control form-group">
+        <input class="form-control string required" type="text" name="search[query]" id="search_query" />
+        <button name="button" type="submit" class="btn btn-flat">
+          <i class="fas fa-search"></i> Search
+        </button>
+      </div>
+    <% end %>
+
+<div class="results d-flex justify-content-between mt-2" >
+    <% if @filtered %>
+      <p> Nous avons trouvé <%= @recipes.size %> résultat(s)</p>
+      <p><%= link_to "Supprimez le filtre X", recipes_path , class: "btn-filter" %></p>
+    <% end %>
+</div>
+    <div class="wrap">
     <% @recipes.each do |recipe| %>
       <div class="card-link card-link-infos">
+
           <% if recipe.photo.attached? %>
             <%= cl_image_tag recipe.photo.key %>
           <% end %>
@@ -57,5 +82,6 @@
           </div>
       </div>
     <% end %>
+    </div>
   </div>
 </div>

@@ -1,8 +1,13 @@
 .cards {
   display: flex;
-  flex-wrap: wrap;
-  margin: 10px 3vw;
+  flex-direction: column;
   // z-index:1;
+}
+
+.wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 1vw;
 }
 
 .card-link {
@@ -157,10 +162,32 @@
   // z-index: 80;
   margin-top: 1.5rem !important;
   margin-right: 1.3rem;
-  width:20vw
+  width:20vw;
+  .card-recipes-list {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    margin : auto 12px;
+    .chosen-recipe {
+      display: flex;
+      justify-content: space-between;
+      p {
+        text-align: left;
+      }
+    }
+  }
 }
 
 
 .fa-times {
   color:#156064;
+}
+
+.btn-filter{
+  text-decoration: none;
+  color: black;
+}
+
+.btn-filter:hover {
+  color: grey;
 }

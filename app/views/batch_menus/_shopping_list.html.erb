@@ -2,9 +2,9 @@
   <% shopping_list.each do |category, elements| %>
     <div>
     <% if category == "boucherie" %>
-      <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f969.png" alt=""> <%= category.capitalize %></h3>
+      <h3 class='text-center'>🥩 <%= category.capitalize %></h3>
     <% elsif category == "boulangerie" %>
-      <h3 class='text-center'><img src="https://images.emojiterra.com/google/noto-emoji/v2.028/128px/1f35e.png" alt=""> <%= category.capitalize %></h3>
+      <h3 class='text-center'>🍞 <%= category.capitalize %></h3>
     <% elsif category == "crèmerie" %>
       <h3 class='text-center'>🧀 <%= category.capitalize %> </h3>
     <% elsif category == "épicerie" %>
