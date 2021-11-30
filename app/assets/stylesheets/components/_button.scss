@@ -2,6 +2,7 @@
   color: white;
   padding: 14px 36px;
   font-size: 18px;
+  margin:10px;
   // border-radius: 4px;
   background:#156064;
   transition: background 0.3s ease;
@@ -35,6 +36,10 @@
   }
 }
 
+.btn-wrapper {
+  display: flex;
+  justify-content: center;
+}
 
 .btn-transparent {
   color: black;
@@ -104,4 +109,8 @@
 
 .modal-footer {
   justify-content: center;
+}
+
+.abs-btn {
+  position: absolute;
 }
