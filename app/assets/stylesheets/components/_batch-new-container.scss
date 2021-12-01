@@ -8,11 +8,13 @@
 
 .batch-new-container h4 {
   color: white;
+  font-size: 28px;
 }
 
 .batch-new-container h6 {
   color: white;
   font-family: 'Pacifico', cursive;
+  font-size: 24px;
 }
 
 #new_batch_menu {
@@ -21,8 +23,8 @@
     align-items: center;
 
     .form-center {
-      width: 254px;
-      height: 254px;
+      width: 220px;
+      height: 220px;
       margin: 0;
       margin-top: 95px;
       border-radius: 50%;
