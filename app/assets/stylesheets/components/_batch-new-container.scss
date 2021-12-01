@@ -45,7 +45,7 @@ input[type=range]::-ms-thumb {
 }
 .dropdown-item.active, .dropdown-item:active {
    outline: none !important;
-   box-shadow: none;
+   box-shadow: red;
    background-color: white;
 }
 
