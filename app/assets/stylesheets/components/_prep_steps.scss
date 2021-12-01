@@ -6,11 +6,17 @@ h3 {
 }
 
 
+
+
 .prep_steps {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.prep_steps h3 {
+  text-shadow: 0 0 15px black;
 }
 
 .step-number {
