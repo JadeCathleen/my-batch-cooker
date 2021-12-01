@@ -23,13 +23,13 @@
               <% if meal_lunch.nil? %>
                 <div class='calendar-square empty'></div>
               <% else %>
-                <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_lunch.recipe.photo.key %>); background-size: cover;"></div>
+                <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_lunch.recipe.photo.key %>); background-size: cover; background-position:center;"></div>
               <% end %>
               <% meal_dinner = @meals.find_by(meal_time: "#{v}_dinner") %>
               <% if meal_dinner.nil?%>
                 <div class='calendar-square empty'></div>
               <% else %>
-                <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_dinner.recipe.photo.key %>); background-size: cover;"></div>
+                <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_dinner.recipe.photo.key %>); background-size: cover; background-position:center;"></div>
               <% end %>
           </div>
         <% end %>
