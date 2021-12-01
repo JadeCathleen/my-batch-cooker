@@ -8,7 +8,9 @@
           <%= link_to batch_menu_path(menu), method: :delete do %>
             <i class="fas fa-times cross"></i>
           <% end %>
-          <%= link_to menu.name, batch_menu_path(menu), class:'to-show' %>
+          <%= link_to batch_menu_path(menu), class:'to-show' do %>
+            Menu <%= menu.name %>
+          <% end %>
           <p class="nb-recipes">Contient <%= menu.recipes.count %> repas</p>
           <p class="creation-date">Créé le <%= menu.created_at.strftime('%d/%m/%Y') %></p>
         </div>

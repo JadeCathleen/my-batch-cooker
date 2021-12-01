@@ -12,17 +12,50 @@
 
 .batch-new-container h6 {
   color: white;
+  font-family: 'Pacifico', cursive;
 }
 
 #new_batch_menu {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 
     .form-center {
-      width: 19%;
+      width: 300px;
+      height: 300px;
       margin: 0;
-      margin-top: 82px;
-      border-radius: 150px;
+      margin-top: 95px;
+      border-radius: 50%;
     }
+}
+
+input[type=range]::-webkit-slider-thumb {
+    background: black;
+}
+input[type=range]::-moz-range-thumb {
+    background: black;
+}
+input[type=range]::-ms-thumb {
+    background: black;
+}
+
+.btn:focus,.btn:active {
+   outline: none !important;
+   box-shadow: none;
+}
+.dropdown-item.active, .dropdown-item:active {
+   outline: none !important;
+   box-shadow: red;
+   background-color: white;
+}
+
+input[type=text]:focus {
+    box-shadow: none;
+    border: none;
+}
+input[type=text]::-moz-range-thumb {
+    background: black;
+}
+input[type=text]::-ms-thumb {
+    background: black;
 }

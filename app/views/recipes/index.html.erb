@@ -1,3 +1,6 @@
+<%# <body style="background-image: url('https://images.pexels.com/photos/326311/pexels-photo-326311.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'); background-size: cover; background-position:center;" > %>
+
+
 <div id="recipes-index" data-controller="recipe-selection">
   <div class="card-list-wrapper">
     <div class="card lists-container mt-4">
@@ -24,7 +27,7 @@
         <% end %>
       </div>
       <% if @nb_of_meals_left > 0 %>
-        <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-home disabled', style: 'color:white' %>
+        <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-home disabled', style: 'color:white;' %>
       <% else %>
         <%= link_to 'Valider', batch_menu_path(@batch_menu), class: 'btn btn-home', style: 'color:white' %>
       <% end %>
@@ -87,3 +90,5 @@
     </div>
   </div>
 </div>
+
+<%# </body> %>
