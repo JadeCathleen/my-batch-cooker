@@ -1,22 +1,17 @@
 
-
-.modal-content p {
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-
-.modal-body {
-  margin: 17px;
-  border-top: none;
-}
-
-
-
 .shopping-list-modal {
+  .modal-content p {
+    margin-bottom: 5px;
+    text-align: center;
+  }
+  .modal-body {
+    margin: 18px;
+    padding: 0;
+    border-top: lightgray;
+  }
   .modal-content {
     border-radius: 30px;
-    padding: 20px;
+    padding: 10px;
     width: 467px;
     margin: auto;
   }
@@ -48,32 +43,34 @@
     width: auto;
     // flex-wrap: wrap;
   }
+  .scroll-down {
+      max-height: 1000px;
+      overflow-y: auto;
+  }
 }
 
-.modal-body img{
-  height: 110px;
-  margin-left: 171px;
-  margin-top: -17px;
-}
-.scroll-down {
-    max-height: 1000px;
-    overflow-y: auto;
-}
+.send-modal {
+  .modal-body img{
+    height: 110px;
+    margin-left: 171px;
+    margin-top: -17px;
+  }
 
-.modal-header {
-  border-bottom: none;
-}
+  .modal-header {
+    border-bottom: none;
+  }
 
-.modal-header  p{
-  font-size: 49px;
-  text-align: center;
-  margin-right: 215px;
-}
+  .modal-header  p{
+    font-size: 49px;
+    text-align: center;
+    margin-right: 215px;
+  }
 
-.modal-content {
-  border-radius: 30px;
-}
+  .modal-content {
+    border-radius: 30px;
+  }
 
-.modal-header .btn-close {
-  margin: -3.5rem -0.5rem -0.5rem -130px;
+  .modal-header .btn-close {
+    margin: -3.5rem -0.5rem -0.5rem -130px;
+  }
 }
