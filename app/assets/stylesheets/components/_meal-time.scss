@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 40px;
   margin-bottom: 30px;
   backdrop-filter: blur(5px);
   border-radius: 30px;
@@ -24,6 +24,7 @@
 
 .form-check{
   padding: 12px;
+  font-weight: bold;
 }
 
 .calendar-input + label {
@@ -38,14 +39,16 @@
     border-radius: 4px;
     color: black;
     /* border-color: #dbd5d5; */
-    background-color: white;
+    background-color:rgba(255, 255, 255, 0.664);
     box-shadow: inset 0px 0px 0px 2px white;
+    opacity: 0.5;
 
 }
 
 .calendar-input:checked + label {
   color: white !important;
   background-color: #85BDA6 ;
+  opacity: 1;
 }
 
 // .calendar-input:checked:hover {
@@ -53,7 +56,7 @@
 // }
 
 .meal-time-wrapper {
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 
   h6 {
     border-bottom: 1px solid lightgray;
