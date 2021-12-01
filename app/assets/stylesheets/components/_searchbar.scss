@@ -5,17 +5,23 @@
 
 .search-form-control .btn {
   position: absolute;
-  top: 8px;
+  top: 3px;
   bottom: 8px;
-  left: 702px;
+  right: 3px;
+  padding: 19px 25px;
+  margin: 0px;
+  // left: 702px;
   color: white;
+  height: 35px;
+  display: flex;
+  align-items: center;
 }
 
 .search-form-control .form-control {
   height: 3.5rem;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
   border: 1px solid #E7E7E7;
-  width: 52rem;
+  // position: relative;
 }
 
 .search-form-control .form-control:focus {
