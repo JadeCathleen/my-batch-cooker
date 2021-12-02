@@ -18,12 +18,12 @@
         <% days.each do |k, v| %>
           <div>
 
-            <h5 class="text-center" style='font-size: 150%; text-shadow: 0 0 15px black;'><%= k %></h5>
+            <h6 class="text-center"><%= k %></h6>
               <% meal_lunch = @meals.find_by(meal_time: "#{v}_lunch") %>
               <% if meal_lunch.nil? %>
-                <div class='calendar-square empty'></div>
+                <div class='calendar-square empty mb-2'></div>
               <% else %>
-                <div class='calendar-square' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_lunch.recipe.photo.key %>); background-size: cover; background-position:center;"></div>
+                <div class='calendar-square mb-2' style="background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)), url(<%= cl_image_path meal_lunch.recipe.photo.key %>); background-size: cover; background-position:center;"></div>
               <% end %>
               <% meal_dinner = @meals.find_by(meal_time: "#{v}_dinner") %>
               <% if meal_dinner.nil?%>
@@ -42,7 +42,7 @@
         </div>
       <div class="buttons-action">
         <button type="button" class="btn btn-home btn-cook" data-bs-toggle="modal" data-bs-target="#exampleModal">
-          <i class="fas fa-shopping-basket"></i>    Courses
+          Courses <i class="fas fa-shopping-basket"></i>
         </button>
           <div class="modal fade shopping-list-modal" id="exampleModal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog">
@@ -75,7 +75,9 @@
               </div>
             </div>
           </div>
-        <%= link_to 'Cuisiner !', associate_prep_steps_batch_menu_path(@batch_menu), class:'btn btn-home' %>
+        <%= link_to associate_prep_steps_batch_menu_path(@batch_menu), class:'btn btn-home' do %>
+           Cuisiner <i class="fas fa-utensils"></i>
+        <% end %>
       </div>
     </div>
   </div>

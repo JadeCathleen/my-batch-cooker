@@ -28,11 +28,22 @@
   padding: 20px;
   background: #e1e0e03b;
   // width: 765px;
-   width: 68rem;
+  //  width: 70vw;
 
   fieldset {
     margin-bottom: 0 !important;
     padding: 5px;
+  }
+
+  h6 {
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    font-size: 140%;
+    text-shadow: 0 0 15px black;
+    color: white;
+  }
+  > div:not(:last-child) {
+    border-right: 1px solid lightgray;
   }
 }
 
@@ -97,11 +108,11 @@
 .calendar-square {
   // padding: 25px;
   border-radius: 4px;
-  width: 10vw;
-  height: 17vh;
+  width: 9vw;
+  height: 18vh;
   margin: 10px;
 }
 
 .empty {
-  background-color:rgba(255, 255, 255, 0.664);
+  background-color:rgba(255, 255, 255, 0.445);
 }
