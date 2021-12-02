@@ -18,7 +18,7 @@
         <% days.each do |k, v| %>
           <div>
 
-            <h5 class="text-center" style='font-size: 150%; text-shadow: 0 0 15px black;'><%= k %></h5>
+            <h6 class="text-center"><%= k %></h6>
               <% meal_lunch = @meals.find_by(meal_time: "#{v}_lunch") %>
               <% if meal_lunch.nil? %>
                 <div class='calendar-square empty'></div>
@@ -38,7 +38,7 @@
 
     <div class="buttons mb-3 d-flex justify-content-between" style="width: 95%">
         <div class="btn-wrapper abs-btn">
-          <%= link_to 'Retour', recipes_path, class:'btn btn-back' %>
+          <%= link_to 'Retour', recipes_path, class:'btn btn-test-1' %>
         </div>
       <div class="buttons-action">
         <button type="button" class="btn btn-home btn-cook" data-bs-toggle="modal" data-bs-target="#exampleModal">
