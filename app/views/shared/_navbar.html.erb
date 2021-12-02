@@ -23,7 +23,7 @@
               <%#= link_to "Messages", "#", class: "nav-link" %>
             <%# </li> %>
             <li class="nav-item dropdown">
-              <span id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup=true aria-expanded=false><%= current_user.email %></span>
+              <span id="navbarDropdown" data-bs-toggle="dropdown" aria-haspopup=true aria-expanded=false><%= current_user.username %></span>
               <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <%= link_to "Créer un nouveau menu", new_batch_menu_path, class: "dropdown-item" %>
                 <%= link_to "Mes menus", batch_menus_path, class: "dropdown-item" %>

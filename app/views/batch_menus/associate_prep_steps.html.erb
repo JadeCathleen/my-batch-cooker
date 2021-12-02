@@ -79,7 +79,9 @@
       </div>
 
       <div class="commands">
-          <%= link_to 'Retour', batch_menu_path(@batch_menu), class:'btn btn-back' %>
+          <%= link_to batch_menu_path(@batch_menu), class:'btn btn-back' do %>
+            <i class="fas fa-arrow-left"></i> Retour
+          <% end %>
       </div>
 
       </div>
