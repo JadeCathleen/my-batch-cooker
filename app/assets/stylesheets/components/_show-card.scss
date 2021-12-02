@@ -13,8 +13,8 @@
     padding: 0;
     opacity: 95%;
   .recipe-img > img {
-    width: 35vw;
-    height: 50vh!important;
+    width: 20vw;
+    height: 41vh!important;
     object-fit: cover;
     border-radius: 30px;
   }
@@ -29,9 +29,14 @@
     text-justify: inter-word;
     text-shadow: none;
   }
+  .show-description h6{
+    font-family: 'Didact Gothic', sans-serif;
+    font-size: 20px;
+  }
   .scroll {
     max-height: 200px;
     overflow-y: auto;
+    padding-right: 1rem;
 }
 }
 
