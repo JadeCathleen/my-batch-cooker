@@ -13,7 +13,7 @@
 
   fieldset {
     margin-bottom: 0 !important;
-    padding: 5px;
+    // padding: 5px;
   }
 }
 
@@ -44,7 +44,7 @@
 }
 
 .form-check{
-  padding: 15px;
+  padding: 15px 15px 0px 15px;
   font-weight: bold;
 }
 
@@ -55,12 +55,12 @@
     width: 100%;
     font-size: 19px;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     /* border: 50px solid #EAEAEA; */
     border-radius: 4px;
     color: white;
     /* border-color: #dbd5d5; */
-    background-color:rgba(255, 255, 255, 0.664);
+    background-color:rgba(255, 255, 255, 0.541);
     box-shadow: inset 0px 0px 0px 2px white;
     // opacity: 0.5;
     text-shadow: 0px 0px 7px black;
@@ -69,7 +69,8 @@
 
 .calendar-input:checked + label {
   color: white !important;
-  background-color: #85BDA6 ;
+  background-color: black ;
+  box-shadow: inset 0px 0px 0px 2px rgb(184, 182, 182);
   opacity: 1;
 }
 
@@ -89,9 +90,9 @@
     border-right: 1px solid lightgray;
   }
 
-  fieldset:not(:last-child) {
-    border-bottom: 1px solid lightgray;
-  }
+  // fieldset:not(:last-child) {
+  //   border-bottom: 1px solid lightgray;
+  // }
 }
 
 .calendar-square {

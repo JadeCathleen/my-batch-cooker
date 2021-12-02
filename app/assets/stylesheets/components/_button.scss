@@ -23,12 +23,14 @@
     top: 0;
     right: 0;
     z-index: -1;
-    background: #85BDA6;
+    background: black;
     transition: all 0.3s ease;
-    border: #85BDA6;
+    // border: black;
+    color:white;
   }
   &:hover {
-    border: 1px solid #85BDA6;
+    // border: 0.16rem solid black;
+    color: white;
     &:after {
       left: 0;
       width: 100%;
@@ -74,20 +76,21 @@
 
 .btn-back {
   color: white;
-  padding: 8px 24px;
-  font-size: 15px;
-  border-radius: 4px;
-  background:  black;
-  transition: background 0.3s ease;
-  border-radius: 50px;
+  // padding: 8px 24px;
+  text-shadow: 0 0 15px black;
+  font-size: 18px;
+  // border-radius: 4px;
+  // background:  black;
+  // transition: background 0.3s ease;
+  // border-radius: 50px;
   font-weight: lighter;
   font-family: "Galano Grotesque Regular",sans-serif;
   text-decoration: none;
 }
 
 .btn-back:hover {
-  background: #156064;
-  color:white;
+  color:lightgray;
+  background: none;
 }
 .btn-back-to-list {
   color: white;
