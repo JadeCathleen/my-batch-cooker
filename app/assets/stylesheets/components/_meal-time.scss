@@ -42,6 +42,9 @@
     text-shadow: 0 0 15px black;
     color: white;
   }
+  > div:not(:last-child) {
+    border-right: 1px solid lightgray;
+  }
 }
 
 .meal-time-wrapper h6 {
@@ -111,5 +114,5 @@
 }
 
 .empty {
-  background-color:rgba(255, 255, 255, 0.664);
+  background-color:rgba(255, 255, 255, 0.445);
 }
