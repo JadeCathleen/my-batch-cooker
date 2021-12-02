@@ -144,7 +144,7 @@
 }
 
 #recipes-index {
-  margin: 5vh 5vw;
+  margin: 0 5vw;
   display:flex;
   justify-content: center;
   // align-items: center;
@@ -195,7 +195,7 @@
     flex-direction: column;
     align-content: flex-start;
     margin: 11px 5px;
-    max-height: 33vh;
+    max-height: 37vh;
     overflow-y: auto;
     padding: 0px 27px;
     .chosen-recipe {
@@ -215,13 +215,4 @@
 
 .fa-times {
   color:#156064;
-}
-
-.btn-filter{
-  text-decoration: none;
-  color: white;
-}
-
-.btn-filter:hover {
-  color: grey;
 }
