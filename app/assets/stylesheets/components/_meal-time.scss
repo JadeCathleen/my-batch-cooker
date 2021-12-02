@@ -9,6 +9,26 @@
   padding: 20px;
   background: #e1e0e03b;
   // width: 765px;
+   width: 55rem;
+
+  fieldset {
+    margin-bottom: 0 !important;
+    padding: 5px;
+  }
+}
+
+.meal-time-wrapper-2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 19px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
+  padding: 20px;
+  background: #e1e0e03b;
+  // width: 765px;
+   width: 68rem;
 
   fieldset {
     margin-bottom: 0 !important;
@@ -24,7 +44,7 @@
 }
 
 .form-check{
-  padding: 12px;
+  padding: 15px;
   font-weight: bold;
 }
 
@@ -33,7 +53,7 @@
     cursor: pointer;
     box-sizing: border-box;
     width: 100%;
-    font-size: 14px;
+    font-size: 19px;
     text-align: center;
     padding: 20px;
     /* border: 50px solid #EAEAEA; */

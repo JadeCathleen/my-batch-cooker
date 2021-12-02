@@ -11,6 +11,7 @@
   margin: auto;
   &> div{
     width:100%;
+    margin-bottom: 0rem !important;
   }
   input{
     // flex: none;
@@ -26,14 +27,15 @@
   }
 }
 
+
 #count {
   font-weight: bold;
 }
 
 
 #nb-of-meals {
-  padding-top: 58px;
+  padding-top: 20px;
   text-align: center;
   font-weight: bold;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
