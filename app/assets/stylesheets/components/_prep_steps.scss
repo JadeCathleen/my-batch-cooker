@@ -17,6 +17,8 @@ h3 {
 
 .prep_steps h3 {
   text-shadow: 0 0 15px black;
+  margin-top: 14px;
+  margin-bottom: -6px;
 }
 
 .step-number {
@@ -43,7 +45,7 @@ h3 {
   display: flex;
   padding: 12px 10px;
   margin-top: 12px;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
   width: $carousel-width;
   background: rgba(255, 255, 255, 0.699);
   border-radius : 30px;
