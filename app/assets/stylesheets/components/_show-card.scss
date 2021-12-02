@@ -30,18 +30,61 @@
     text-shadow: none;
   }
   .show-description h6{
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-size: 20px;
+    margin-top: 10px;
+    text-align: left;
   }
-  .scroll {
-    max-height: 200px;
-    overflow-y: auto;
-    padding-right: 1rem;
+  .recipe-time > h6 {
+    font-family: 'Nunito', sans-serif;
+    text-align: left;
+  }
+  .accordion-button {
+    background-color: #f4f4f400;
+    padding: 0;
+        box-shadow: none !important;
+
+    &:hover {
+      color: black;
+      border: none;
+          box-shadow: none !important;
+
+    }
+    &:after {
+      color: black;
+      border: none;
+    }
+    .accordion-button:focus {
+    box-shadow: none !important;
+    }
+    .accordion-button:not(.collapsed)::after {
+      filter: grayscale(100%);
+    }
+  }
+  .accordion-body {
+    background-color: white;
+    border: none;
+    color: black;
+    text-shadow: none;
+  }
+  .accordion-item {
+    border: none !important;
+  }
 }
+li::marker {
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
+  font-weight: normal;
+}
+.scroll {
+  max-height: 150px;
+  overflow-y: auto;
+  padding-right: 1rem;
 }
 
 .show-modal {
   // margin: auto;
+  // position: relative;
   .modal-content {
     border-radius: 30px;
     max-width: 70vw;
@@ -49,6 +92,11 @@
   }
   .modal-dialog {
     max-width: 100vw;
+  }
+  .btn-close .show {
+    // position:absolute;
+    top: 15px;
+    right: 15px;
   }
   // .shopping-list {
   //   display: flex;
