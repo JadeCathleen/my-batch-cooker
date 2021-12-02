@@ -1,4 +1,5 @@
 class BatchMenusController < ApplicationController
+  before_action :verify_authenticity_token
 
   def new
     @batch_menu = BatchMenu.new
@@ -24,7 +25,7 @@ class BatchMenusController < ApplicationController
   end
 
   def index
-    @batch_menus = BatchMenu.all
+    @batch_menus = BatchMenu.where(user_id: current_user.id)
   end
 
   def destroy
