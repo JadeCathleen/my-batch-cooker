@@ -15,6 +15,12 @@
   height: 35px;
   display: flex;
   align-items: center;
+  background-color: black;
+  border-radius: 30px;
+}
+
+.search-form-control .btn:hover {
+  background-color: #156064;
 }
 
 .search-form-control .form-control {
@@ -31,15 +37,24 @@
 }
 
 #query-result {
-  padding : 8px 15px;
-  background-color: #85BDA6;
-  // border: 1px solid #156064;
-  color: white;
-  font-weight: bolder;
-  // font-size: large;
-  margin-right: 610px;
-  border-radius: 5px;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+    padding: 8px 15px;
+    background-color: #15606426;
+    color: #156064;
+    font-weight: bolder;
+    margin-right: auto;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border: 1px solid #156064;
+}
+
+.btn-filter{
+  text-decoration: none;
+  color: #156064;
+  margin-left: 15px;
+}
+
+.btn-filter:hover {
+  color: grey;
 }
