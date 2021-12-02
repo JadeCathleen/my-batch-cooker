@@ -36,12 +36,14 @@
     </div>
   </div>
 
-    <div class="buttons mb-3 d-flex justify-content-between" style="width: 95%">
+    <div class="buttons-show mb-3 d-flex justify-content-between" style="width: 95%">
         <div class="btn-wrapper abs-btn">
-          <%= link_to 'Retour', recipes_path, class:'btn btn-back' %>
+          <%= link_to recipes_path, class:'btn btn-back' do %>
+            <i class="fas fa-arrow-left"></i> Retour
+          <% end %>
         </div>
       <div class="buttons-action">
-        <button type="button" class="btn btn-home btn-cook" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-cook" data-bs-toggle="modal" data-bs-target="#exampleModal">
           Courses <i class="fas fa-shopping-basket"></i>
         </button>
           <div class="modal fade shopping-list-modal" id="exampleModal"  tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

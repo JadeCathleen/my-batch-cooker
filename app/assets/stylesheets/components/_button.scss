@@ -23,12 +23,14 @@
     top: 0;
     right: 0;
     z-index: -1;
-    background: #85BDA6;
+    background: black;
     transition: all 0.3s ease;
-    border: #85BDA6;
+    // border: black;
+    color:white;
   }
   &:hover {
-    border: 1px solid #85BDA6;
+    // border: 0.16rem solid black;
+    color: white;
     &:after {
       left: 0;
       width: 100%;
@@ -74,20 +76,21 @@
 
 .btn-back {
   color: white;
-  padding: 8px 24px;
-  font-size: 15px;
-  border-radius: 4px;
-  background:  black;
-  transition: background 0.3s ease;
-  border-radius: 50px;
+  // padding: 8px 24px;
+  text-shadow: 0 0 15px black;
+  font-size: 18px;
+  // border-radius: 4px;
+  // background:  black;
+  // transition: background 0.3s ease;
+  // border-radius: 50px;
   font-weight: lighter;
   font-family: "Galano Grotesque Regular",sans-serif;
   text-decoration: none;
 }
 
 .btn-back:hover {
-  background: #156064;
-  color:white;
+  color:lightgray;
+  background: none;
 }
 .btn-back-to-list {
   color: white;
@@ -113,45 +116,16 @@
 }
 
 .btn-cook {
-  margin-left: 10px;
-  border: 2px solid #156064;
-  background: #6c8b8dbd;
-}
-
-.btn-test-1 {
-  display: inline-block;
-  padding: 0.5em 1.7em;
-  margin: 0 0.1em 0.1em 0;
-  border: 0.16em solid rgb(255, 255, 255);
-  border-radius: 2em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: "Roboto", sans-serif;
-  font-weight: 300;
-  background-color: black;
-  color: #ffffff;
-  text-shadow: 0 0.04em 0.04em rgba(255, 255, 255, 0.253);
-  text-align: center;
-  transition: all 0.2s;
-}
-
-.btn-test-1:hover {
-  color: black;
-  background-color: rgb(255, 255, 255);
-}
-
-.btn-test-2 {
-  color: white;
-  border: 0.16em solid white;
+color: white;
   padding: 14px 36px;
   font-size: 18px;
   // margin:10px;
   // border-radius: 4px;
-  background:#F26419;
+  background:black;
   transition: background 0.3s ease;
   border-radius: 50px;
   // font-weight: lighter;
-  font-family: "Roboto", sans-serif;
+  font-family: "Nunito", "Helvetica", "sans-serif";
   text-decoration: none;
   position: relative;
   z-index: 0;
@@ -166,38 +140,14 @@
     top: 0;
     right: 0;
     z-index: -1;
-    background: white;
+    background: #156064;
     transition: all 0.3s ease;
+    // border: black;
+    color:white;
   }
   &:hover {
-    color: #F26419;
-    border: 0.16em solid #F26419;
-    &:after {
-      left: 0;
-      width: 100%;
-    }
-  }
-}
-
-.btn-test-3 {
-  margin-left: 10px;
-  margin-right: 30px;
-  border: 0.16em solid white;
-  background: #BF8F4F;
-  &:after {
-    position: absolute;
-    content: "";
-    width: 0;
-    height: 100%;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    background: white;
-    transition: all 0.3s ease;
-  }
-  &:hover {
-    color: #F77F00;
-    border: 0.16em solid #F77F00;
+    // border: 0.16rem solid black;
+    color: white;
     &:after {
       left: 0;
       width: 100%;
