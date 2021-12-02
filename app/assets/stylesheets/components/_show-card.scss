@@ -12,6 +12,15 @@
     align-items: center;
     padding: 0;
     opacity: 95%;
+
+    .accordion-button:not(.collapsed) {
+      color: black;
+    }
+
+    .accordion-button:after {
+      filter: grayscale(1) contrast(1) brightness(0.5);
+    }
+
   .recipe-img > img {
     width: 20vw;
     height: 41vh!important;
@@ -104,4 +113,30 @@ li::marker {
   //   height: 60vh;
   //   flex-wrap: wrap;
   // }
+}
+
+.accordion {
+  p {
+    font-family: "Nunito";
+    color: black;
+    text-shadow: none;
+  }
+
+  li::marker {
+    color: black;
+    text-shadow: none;
+  }
+
+}
+
+.accordion-item {
+    background: white;
+    border: none;
+}
+
+button.btn-close.show {
+    right: 10px;
+    top: 10px;
+    position: absolute;
+    z-index: 1;
 }
