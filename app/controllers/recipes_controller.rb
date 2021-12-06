@@ -3,7 +3,7 @@ class RecipesController < ApplicationController
     @recipes_list = RecipesList.new
     @recipes_lists = RecipesList.where(batch_menu_id: current_user.batch_menus.last)
     @batch_menu = BatchMenu.find(current_user.batch_menus.last.id)
-    @meals_list = @batch_menu.attributes.select { |k, v| v == true}.keys
+    @meals_list = @batch_menu.attributes.select { |_k, v| v == true }.keys
     @nb_of_meals = @meals_list.count
     @nb_of_meals_left = @meals_list.count - @batch_menu.recipes.count
 
