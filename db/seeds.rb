@@ -1,14 +1,5 @@
-
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
 require 'csv'
 require 'open-uri'
-
 
 if Rails.env.development?
   puts "Cleaning database..."
@@ -18,9 +9,9 @@ if Rails.env.development?
   Ingredient.destroy_all
   User.destroy_all
 end
-User.create!(email: 'test@test.com', password: 'qwerty')
 
 csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
+
 # Recipes seed
 
 recipes_filepath = 'lib/seeds/recipes_seed.csv'
@@ -75,3 +66,7 @@ CSV.foreach(ingredient_quantities_filepath, csv_options) do |row|
   IngredientQuantity.create(ing_qty)
   puts "Creation de la quantité d'ingrédient... "
 end
+
+# user seed
+
+User.create!(email: 'test@test.com', password: 'qwerty')
