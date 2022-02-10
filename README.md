@@ -1,6 +1,6 @@
 # MyBatchCooker
 
-[MyBatchCooker](http://www.mybatchcooker.com) is a web app that allows people to create their own meal prep menus by choosing the recipes they want. The goal is to compute the shopping list by supermarket department and also compute the prep steps of all the chosen recipes.
+[MyBatchCooker](http://www.mybatchcooker.com) is a web app that allows people to create their own meal prep menus by choosing from a list the recipes they like. The goal is to compute the shopping list by supermarket department and also compute the prep steps of all the chosen recipes combined - thus saving users a lot of time.
 
 ## Installation
 
@@ -12,7 +12,7 @@ bundle install
 
 ## API (V1)
 
-You can get the information about all recipes with this 2 links :
+You can get the information about all recipes with these 2 links :
  - [index](http://www.mybatchcooker.com/api/v1/recipes) : http://www.mybatchcooker.com/api/v1/recipes
  - show : http://www.mybatchcooker.com/api/v1/recipes/:id
 
