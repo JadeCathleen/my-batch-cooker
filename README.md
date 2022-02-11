@@ -10,6 +10,8 @@ Please don't forget to bundle
 bundle install
 ```
 
+Also please add your Cloudinary key on your .env file, otherwise the pictures will be broken in your local server.
+
 ## API (V1)
 
 You can get the information about all recipes with this 2 links :
