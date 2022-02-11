@@ -10,7 +10,7 @@ Please don't forget to bundle
 bundle install
 ```
 
-Also please add your Cloudinary key on your .env file, otherwise the pictures will be broken in your local server.
+Also please add your Cloudinary key on your .env file, otherwise the pictures would be broken in your local server.
 
 ## API (V1)
 
