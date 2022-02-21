@@ -11,10 +11,14 @@ class BatchMenuPolicy < ApplicationPolicy
   end
 
   def show?
-    record.user_id = @user.id
+    record.user == user
+  end
+
+  def associate_prep_steps?
+    record.user == user
   end
 
   def destroy?
-    record.user_id = @user.id
+    record.user == user
   end
 end

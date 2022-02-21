@@ -1,6 +1,6 @@
 class BatchMenusController < ApplicationController
   before_action :verify_authenticity_token
-  before_action :set_batch_menu, only: [:show, :destroy]
+  before_action :set_batch_menu, only: [:show, :destroy, :associate_prep_steps]
 
   def new
     @batch_menu = BatchMenu.new
