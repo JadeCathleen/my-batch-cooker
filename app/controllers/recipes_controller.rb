@@ -8,11 +8,11 @@ class RecipesController < ApplicationController
     @nb_of_meals_left = @meals_list.count - @batch_menu.recipes.count
 
     if params.dig(:search, :query).present?
-      @recipes = Recipe.order(created_at: :desc).global_search(params.dig(:search, :query))
+      @recipes = policy_scope(Recipe).order(created_at: :desc).global_search(params.dig(:search, :query))
       @filtered = true
     else
       @filtered = false
-      @recipes = Recipe.order(created_at: :desc)
+      @recipes = policy_scope(Recipe).order(created_at: :desc)
     end
   end
 
