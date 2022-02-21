@@ -3,11 +3,12 @@ class RecipesListsController < ApplicationController
 
   def create
     @recipes_list = RecipesList.new(recipe_list_params)
+    authorize @recipes_list
     @recipes_list.recipe_id = params['recipes_list']['recipe_id']
     @recipe = Recipe.find(params['recipes_list']['recipe_id'])
     @recipes_list.batch_menu_id = params['batch_menu_id']
     @batch_menu = BatchMenu.find(params['batch_menu_id'])
-    @meals_list = @batch_menu.attributes.select { |k, v| v == true}.keys
+    @meals_list = @batch_menu.attributes.select { |_k, v| v == true}.keys
     @nb_of_meals = @meals_list.count
     @nb_of_meals_left = @meals_list.count - @batch_menu.recipes.count
 
@@ -25,6 +26,7 @@ class RecipesListsController < ApplicationController
 
   def destroy
     @recipes_list = RecipesList.find(params[:id])
+    authorize @recipes_list
     @recipes_list.destroy
     redirect_to recipes_path
   end

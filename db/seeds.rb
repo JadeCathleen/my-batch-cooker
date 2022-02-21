@@ -18,7 +18,7 @@ if Rails.env.development?
   Ingredient.destroy_all
   User.destroy_all
 end
-User.create!(email: 'test@test.com', password: 'qwerty')
+User.create!(email: 'test@test.com', password: 'qwerty', username: 'test')
 
 csv_options = { col_sep: ',', quote_char: '"', headers: :first_row }
 # Recipes seed
