@@ -5,4 +5,6 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :batch_menus, dependent: :destroy
   has_many :recipes_lists, through: :batch_menu
+
+  validates :username, presence: true
 end
