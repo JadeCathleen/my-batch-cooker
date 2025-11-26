@@ -1,22 +1,39 @@
 # MyBatchCooker
 
-[MyBatchCooker](http://www.mybatchcooker.com) is a French web app that allows people to create their own meal prep menus by choosing from a list the recipes they like. The goal is to compute the shopping list by supermarket department and also compute the prep steps of all the chosen recipes combined, thus saving users a lot of time.
+**MyBatchCooker** is a French web app that allows people to create their own meal prep menus by choosing from a list the recipes they like. The goal is to compute the shopping list by supermarket department and also compute the prep steps of all the chosen recipes combined, thus saving users a lot of time.
 
 ## Installation
+*Warning: this project is no longer deployed, so you'll need to launch it locally.*
 
-Please don't forget to bundle
+Add your Cloudinary key on your .env file, otherwise the pictures would be broken in your local server:
 
+#### `.env`
+```bash
+CLOUDINARY_URL=cloudinary://YOUR_KEY_HERE
+```
+
+Then install the required gem versions with below command line:
 ```bash
 bundle install
 ```
 
-Also please add your Cloudinary key on your .env file, otherwise the pictures would be broken in your local server.
+Then create the database seed with below command line:
+```bash
+rails db:seed
+```
+
+Then you can launch rails server with below command line:
+```bash
+rails server
+```
+
+The website is accessible at this url: http://localhost:3000/
 
 ## API (V1)
 
-You can get the information about all recipes with these 2 links :
- - [index](http://www.mybatchcooker.com/api/v1/recipes) : http://www.mybatchcooker.com/api/v1/recipes
- - show : http://www.mybatchcooker.com/api/v1/recipes/:id
+After launching the server locally, you can get the information about all recipes with these 2 links :
+ - index : http://localhost:3000/api/v1/recipes
+ - show : http://localhost:3000/api/v1/recipes/:id
 
 
 ## Contributing
