@@ -320,32 +320,31 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails (= 10.2.5)
   bootsnap (>= 1.4.2)
-  byebug
-  capybara
-  cloudinary
+  capybara (~> 3.40.0)
+  cloudinary (~> 2.4.0)
   devise (~> 4.8)
-  dotenv-rails
-  dragula-rails
-  jbuilder
+  dotenv-rails (~> 3.1.8)
+  dragula-rails (~> 3.7.0)
+  jbuilder (~> 2.14.1)
   listen
-  pg
-  pg_search
-  pry-byebug
-  pry-rails
+  pg (~> 1.6.2)
+  pg_search (~> 2.3.7)
+  pry-byebug (~> 3.11.0)
+  pry-rails (~> 0.3.11)
   puma (~> 4.1)
-  pundit
+  pundit (~> 2.5.2)
   rails (~> 7.0.10)
-  redis
+  redis (~> 5.4.1)
   sass-rails (>= 6)
-  selenium-webdriver
-  simple_form
-  spring
-  spring-watcher-listen
-  turbolinks
-  tzinfo-data
+  selenium-webdriver (~> 4.38.0)
+  simple_form (~> 5.4.0)
+  spring (~> 4.4.0)
+  spring-watcher-listen (~> 2.1.0)
+  turbolinks (~> 5.2.1)
+  tzinfo-data (~> 2.0.6)
   web-console
-  webdrivers
-  webpacker
+  webdrivers (~> 5.2.0)
+  webpacker (~> 5.4.4)
 
 RUBY VERSION
    ruby 3.4.7p58
