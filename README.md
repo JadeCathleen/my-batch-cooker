@@ -1,45 +1,78 @@
-# MyBatchCooker
+# 🥘 MyBatchCooker
 
-**MyBatchCooker** is a French web app that allows people to create their own meal prep menus by choosing from a list the recipes they like. The goal is to compute the shopping list by supermarket department and also compute the prep steps of all the chosen recipes combined, thus saving users a lot of time.
+> A French web app designed to help plan weekly meals and organize batch-cooking sessions.
+> MyBatchCooker lets you **select recipes**, **generate a categorized shopping list**, and **view combined preparation steps** to save time in the kitchen.
 
-## Installation
-*Warning: this project is no longer deployed, so you'll need to launch it locally.*
+## 🚀 Features
 
-Add your Cloudinary key on your .env file, otherwise the pictures would be broken in your local server:
+* Select your preferred recipes
+* Automatic **shopping list grouped by grocery aisle**
+* Combined **preparation steps** for faster batch cooking
+* Simple REST API (e.g., `/api/v1/recipes`)
+* Built with **Ruby on Rails**
 
-#### `.env`
-```bash
-CLOUDINARY_URL=cloudinary://YOUR_KEY_HERE
+## 💻 Local Demo
+
+⚠️ This project is **no longer deployed**, so you must run it locally.
+
+### 🔧 Requirements
+
+Make sure you have the following installed:
+
+- Ruby 3.4.7
+- Rails
+- Bundler
+- Node.js / Yarn
+- A Cloudinary account (for image uploads)
+
+## 🛠️ Installation
+
+1. **Clone the repository**
+  ```sh
+  git clone https://github.com/JadeCathleen/my-batch-cooker.git
+  cd my-batch-cooker
+  ```
+2. **Install dependencies**
+  ```sh
+  bundle install
+  yarn install
+  ```
+3. **Set up Cloudinary**
+Create a `.env` file at the root of the project and add:
+```env
+CLOUDINARY_URL=cloudinary://YOUR_CLOUDINARY_KEY
 ```
-
-Then install the required gem versions with below command line:
-```bash
-bundle install
-```
-
-Then create the database seed with below command line:
-```bash
-rails db:seed
-```
-
-Then you can launch rails server with below command line:
-```bash
-rails server
-```
-
-The website is accessible at this url: http://localhost:3000/
-
-## API (V1)
-
-After launching the server locally, you can get the information about all recipes with these 2 links :
- - index : http://localhost:3000/api/v1/recipes
- - show : http://localhost:3000/api/v1/recipes/:id
+(If you don’t have a key yet, you can create an account on https://cloudinary.com/)
+4. **Set up the database**
+  ```sh
+  rails db:prepare db:seed
+  ```
+This will create the database (if missing) and run migrations.
+5. **Start the server**
+  ```sh
+  rails server
+  ```
+6. **Open the app**
+Visit http://localhost:3000 in your browser.
 
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+## 📡 API (Version 1)
+Once the server is running, you can access the API endpoints:
+| Endpoint              | Description             |
+| --------------------- | ----------------------- |
+| `/api/v1/recipes`     | Returns all recipes     |
+| `/api/v1/recipes/:id` | Returns a single recipe |
 
-Please make sure to update tests as appropriate.
+## 🤝 Contributing
+
+Contributions are welcome!
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/my-new-feature`)
+3. Commit your changes (`git commit -m "Add my new feature"`)
+4. Push to your branch (`git push origin feature/my-new-feature`)
+5. Open a Pull Request
+
+Please update tests as needed when adding or modifying functionality.
 
 ## License
 
